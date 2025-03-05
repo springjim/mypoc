@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 12</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Add rules or changes will take effect immediately</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 10</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 10</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 32</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Add rule...</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 255</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 53</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="id.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="fence_name.HeaderText" xml:space="preserve">
+    <value>fence name</value>
+  </data>
+  <data name="user_name.HeaderText" xml:space="preserve">
+    <value>user name</value>
+  </data>
+  <data name="user_id.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rule_type.HeaderText" xml:space="preserve">
+    <value>alarm type</value>
+  </data>
+  <data name="rule_assign.HeaderText" xml:space="preserve">
+    <value>white/black list</value>
+  </data>
+  <data name="start_time.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="end_time.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dataGridViewRule.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 252</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>868, 311</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Fence rule definition</value>
+  </data>
+  <data name="action_type.HeaderText" xml:space="preserve">
+    <value>action type</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 22</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Export Excel</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 22</value>
+  </data>
+  <data name="toolStripMenuItem2.Text" xml:space="preserve">
+    <value>Export Pdf</value>
+  </data>
+  <data name="contextMenuStrip_Queryalarm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 48</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dgvFenceAlarm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="dgvFenceAlarm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 266</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Result on Map</value>
+  </data>
+  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>550, 7</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="dateTimePickerEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 21</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="dateTimePickerStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 21</value>
+  </data>
+  <data name="cbRule.Items" xml:space="preserve">
+    <value>all warning</value>
+  </data>
+  <data name="cbRule.Items1" xml:space="preserve">
+    <value>in warning</value>
+  </data>
+  <data name="cbRule.Items2" xml:space="preserve">
+    <value>out warning</value>
+  </data>
+  <data name="cbRule.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 20</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 39</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>868, 311</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Warning record query</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>876, 337</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Fence name</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>876, 38</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>876, 375</value>
+  </data>
+  <data name="toolStripMenuItemDel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 22</value>
+  </data>
+  <data name="toolStripMenuItemDel.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="toolStripMenuItemEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 22</value>
+  </data>
+  <data name="toolStripMenuItemEdit.Text" xml:space="preserve">
+    <value>Edit...</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 48</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>876, 375</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA
+        AAD+/v7////////9///5/v//+v7////9///07/H/9Pb3//v////l19n/2sjH//Td4f/49vb/+P//////
+        ///v+/3/+/////79///s+fv/1ubs/+r09P/u9PP/9/77//7//f/w8vP/5fHz/+H29P/6//3/+fz///z/
+        /f/7///////////////+/v7//P7///r+///1/f3/+/////n9/v/9////5tra/6oYHf+zDhb/rxwk/7U+
+        P//Bb3T/59LR//r//f/8//3/+v/9//r//v////7///7///7//f/7/vz//fz///r+/////v/////+///9
+        /P/4/f7//f///////v///v///f/////////9//////////r//v/6//7/+P////j9/v/y8e3/zmdq/7IG
+        CP+wDhP/sA8X/6IAAP+xDRL/xYWE//v4+v/3//7/+/3+//7//f/8/v7/+P79//v9/f///v///////+z6
+        +P/h8PL/+Pvy//r++f/8/v///v7+///+///////////////////8/v7//////////////f7//Pv9////
+        ///w////y6Si/7wOFv+sIiP/w42N/60mMP+mAAD/t0tR/+7j5v/6//7//P/9///9/f/7//7//v/7/8bl
+        6P9ZtL3/KpKp/ySOn//V6uz//v3///39/f////z//v3////////+/v7///////3//////////f////r/
+        /v/z/f3/+/39//f///////7/0J+d/6AAAf/Vd4L/6eLl/79KS/+VAgD/xJqb//r/+//6//////38//7+
+        /v+j0Nv/EYeY/wJ6mP8PiKL/p9be//n9/v/9/vr/+//+///9/////v/////////////9//////////z+
+        /v/////////////+/v/0//z/+P3//////v/0+ff/vjY6/7MIEP/k4d3/9fDv/9Oho//u5ub///////7+
+        /v/9//7/xeHo/w9/nf8Ah6P/Cn+e/6PX3v/9//////v////9+P/8//3///z//////v/9//////////z+
+        /v///////f/////////8/v7/+f79//z8///9//////////////+/jIr/ogAB/9+vq////v//+//+//3/
+        /////v//1uzy/5LJ1v8rl6n/AIGm/wmEqP8LiKT/hcbP/9Hq7v///v///v7+///9///6//3/+f78////
+        /////v7//v7+//f//v/7/////v7+//3////2////+v/7//Di5P/fur7/wJCK/7xDS/+2AAH/2Kin//f/
+        /v//////6fj6/3O6vv8UiKH/AHyb/wCEov8Fiqb/AIik/wWHpf8BfKL/E4mc/2axuf/f8fL//v7+//z+
+        +P/7/f3////////+///8/v///vz8//v////7////+/f2/9Wmov+4VFT/phcZ/6kBAP+gAAD/rAQQ/5ki
+        I//ey8j//////+Hw8v82lq3/Anqe/wCGo/8BiKT/AYel/wKHo/8CiaX/BIim/wOIqv8Bh6X/AHuZ/yGI
+        of+33OT//P/7///++v/9//7///////n+/f/4/f7//f///9i1uf+0N0D/qgAC/6UAB/+1Njj/x3d2/9+n
+        pv/fycv/5eHg///+///y/Pz/RKmy/wB3l/8DhLH/BoOp/wqHo/8EiaT/Aoml/wGIpP8AiaP/BYek/wOI
+        o/8Di6P/AoGa/ySMo//e7/L///79//3////7//7/+v////T4+f/Nf4b/oAMH/6YFB//CY2r/5MPH//7+
+        /v/8/v7/+/////3//v/4//////7//6TX2f8BfJz/A4qm/wKHo/8Rjav/HZOw/yKSsP8bk7D/FpSt/wqJ
+        qP8ChqT/AYmm/wCIpf8DiKr/AHqg/4G4x//9//////r9//D+/f/6+fv/wmpq/6MAAf+tKS//3bu7//X/
+        /v//////8ejr//br7f/8/v///P7+//z8/P/+/v7/W7DA/wB9oP8AiaT/EpCp/ySas/8tnbT/Oaa8/y+m
+        u/8snrX/KJau/xGRpv8AiaT/AIik/wGHpf8Bf6H/M5qp//P7+v/4/f7/9/7//8N9fv+cAAD/uztA/+/l
+        5f/+/f//5+nq/7CVmP++lJv/uIyT/76co//5+/v/9P/8/////v9Gnrb/AIOf/wKJpf8emLD/OJy1/zWy
+        zv8rx+X/N8bl/ze10f82oLj/KZyx/wuKqf8Ah6f/A4el/wCFp/8gi6D/5fD0///+///exMT/oQQI/7go
+        Lf/x5eP/+/////Tt8P+vi5H/183N//f7/P/58/T/tH+I/7SEiv///v7///7//0qpvP8Cf57/BIim/x+Y
+        sv9Anbf/Nr7a/xXS8f8a0fH/M8zp/zmtxP80m7b/FpGt/wKEp/8DiKT/AIKn/zSSqf/w+Pj/+/39/7hN
+        UP+tAQX/2bSw//P////9////3MfG/7mipv///////fz+//f////t5un/hTY//+HS1v/9////m9LX/wB6
+        mv8BiaX/EpGq/zScs/83q8L/LcPh/yPP7f80xuL/O6u//y+dtf8Skar/AYOm/wCKp/8AfJn/arLD////
+        ///n09L/sQoN/75GS//8/v7//P7///3////j2dn/vaiq//79///3//3/+/////j6+v+RS1L/x5yl///+
+        ///1+fr/Op2z/wB6lP8Iiar/H5Wu/zeerf84pbv/N63K/zSov/85n7b/JZqv/waJqv8Bh6n/AYCf/xqH
+        nP/Q6vD//v/9/9qZmP+kAAH/2JSb//3////9/////f/////////18PH////////////Rxsj/rJea/5tE
+        Uv+dYGr/qZ6g//Ll5//X9vf/M6Ks/wJ9nf8Fgqj/EI2s/xuUrv8nlbH/KpSz/xqSsP8NiKr/AYOo/wB7
+        of8Wh6H/r9/h/////////P7/0YGC/6QAAv/nv8D///7///7+/v/l4+L/uaut/8ahqf/Gq6//4dvc//Px
+        8f/p4+T/o1tn/7uIkP/q6Oj/9vHy/+Pq5f+/193/a7DE/xeHpf8Aepz/AH6b/wB/mv8AgJ3/AH2c/wB8
+        m/8NhJ3/W6i4/9Xq8v/9//7//fr8//n+/f/Mcnf/qAEE/+zGxv//////6uXm/7imp//b0NL/6+bo/93Y
+        2f/Jw8T/+/39//////+ga3T/xKSp///////s9/X/4e3v/7LQ0f/H29z/3ezu/4rKzv9csLz/V6y8/1Wu
+        uP9XrLv/fcbK/9Dj5v///////vz7////+v/7/f7/8v///9SEif+jAAD/37O0/////v/g2dz/9/X1///+
+        ///y//3//f/////////6+vr/+P///6h1ff/Otbn//v7+/9bn5P/x9vn/w9rW/8jn4P///v7///7////+
+        ////////+//////+///9/////f////b//P///f3//v/9//r////7/f7/37S3/6EAAv/JfHr//////8q6
+        wf/19Pb/9/7///n+/P/7/f3//f///////////v7/za2y/9Gxtv/9////y+Tg/7vZ1P+419b/rs7N/+b3
+        9P/y//3//f////38/v/0//3///////r//v/6////+v/+//b+/v/+/f////7//////v/18fD/sx8n/7Ek
+        If/y8PD/1MbM/6eFjP/u5+r////////////49vb/4tXX/8qssf+3eIL/oGFr/7Wgo//Itbj/2ubo/+fz
+        8//g7u3/8/X1//v9/v/2/v7/9v7+///////09fH/vXh1/9mtrv/5/v3/+/////3//v/+/v7/+/////3/
+        ///Pf4T/qAAB/8d4e////v//vKWp/5FWXv+sbHj/sWx3/51TX/+dTVr/q254/8essP/bwsb/zb/B/694
+        gf/n2tz///////v////1/v//9P7+///+///1//7//////8OHh/+ZAAT/u19k//v//////P7///7///3/
+        //////7//P7///Hy8P+yMzX/rgIG/8+jqf/9////7uLg/9qrtP/UqK//2MfK//Lt7v//////+/////3/
+        ///i3N3/29DS//f09v///P7//v7+//z+/v/5//7/+v7////////Us7f/qAkL/64hJP/n2tj///7/////
+        //////7///////3//////v7//f///+vIxf+lGBv/owIK/8uLkP/3//7////////+///9///////+//n+
+        /P/y//3/+P3+//v////3//7/+v/+//j9/v/8/v7/8v/9//n//v//////1Z+f/50PFP+mDRD/3bu7//z+
+        ///+//3//f/+//////////////////3//////v7//f///+HHx/+pJyf/pgAA/7VUVv/q1df//f////z+
+        /v/8/v7////////////+/v7/+/////////////7////+//z+/v/7////5MzO/7xZW/+jAAT/phAQ/9yw
+        r////v7//fz+//7+/v/9//////7////////9///////+//3////8/v7//f///+jg4P+wU1L/qwAC/6QN
+        EP++YWL/5ra1/+zk5f/1+Pz/+/////3//v/+//3//f////f49v/u5ub/2rCx/7ZgYP+xCg3/nAAB/6ww
+        Nv/px8j///7///79///+/Pz//f////3//////v////7//////v/9/////f/8//z//f/6/P3///7///f8
+        +//Impn/szM0/6EBAf+wAAP/sBUZ/7w+Q//FTlb/zFdg/81YYf/MV2D/tkA//50ZGf+gAAH/rgAA/7Yj
+        J//EiIn/8PHv//n//v/0/f///f/+/////v///v7////+/////////v/////////////+/v7//P7+//b+
+        /f/s/v3/+f/+/////v/59PX/3ra7/8hzd/+5Ojz/qhUY/6kOEv+mCA7/pgML/6QGDf+pFBf/vy42/8Nf
+        Zf/VnaL/8Obm//3////+/f//8/z///j+/f/+//3////+///+///9//7//f/+//z+/v////////////3/
+        ///9/////f////n//v/////////////+//////z/+//+//b39f/u3t//6tTW/9zHyf/exsj/3cTI/+3W
+        2v//9PT//f/////+///9///////+//z+/v///f///f/////////9/////v3////+/////v3/+//+////
+        //////////7///7+/v/9//7////+///////8/v7////+//79/////v////7+///////6/////f//////
+        /////////f////////////7//f/////////+/f///////////v////////7///3//////////v7+//3/
+        ///7/////////////v/8/v7///////3//////v////7///3////////////+/////////////f//////
+        /////////f////////////////////3///////7////+/////////////f///////v///v//+v/+////
+        /v/9//////7////9/v/9////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Fence rules and warning enquiries</value>
+  </data>
+</root>

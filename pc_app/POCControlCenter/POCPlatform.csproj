@@ -1,0 +1,1299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\agora_rtc_sdk.3.7.2.245\build\net40\agora_rtc_sdk.props" Condition="Exists('..\packages\agora_rtc_sdk.3.7.2.245\build\net40\agora_rtc_sdk.props')" />
+  <Import Project="..\packages\CefSharp.WinForms.73.1.130\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.73.1.130\build\CefSharp.WinForms.props')" />
+  <Import Project="..\packages\CefSharp.Common.73.1.130\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.73.1.130\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.73.1.13\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.73.1.13\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.73.1.13\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.73.1.13\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB63F097-0B3E-4E89-9A84-B18907BC0932}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>POCControlCenter</RootNamespace>
+    <AssemblyName>POCPlatform</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>POCControlCenter.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="agorartc, Version=3.7.2.245, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\agora_rtc_sdk.3.7.2.245\lib\net40\agorartc.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoUpdater.NET, Version=1.7.6.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autoupdater.NET.Official.1.7.6\lib\net45\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp, Version=73.1.130.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CefSharp.Common.73.1.130\CefSharp\x86\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.BrowserSubprocess.Core, Version=73.1.130.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CefSharp.Common.73.1.130\CefSharp\x86\CefSharp.BrowserSubprocess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core, Version=73.1.130.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CefSharp.Common.73.1.130\CefSharp\x86\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=73.1.130.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CefSharp.WinForms.73.1.130\CefSharp\x86\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\..\中控PDA\安保调度台0512\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net45\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net45\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net45\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1418.22, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1418.22\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1418.22, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1418.22\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1418.22, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1418.22\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.8.5\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftOfficeCore.15.0.0\lib\net35\Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Reface.EventBus, Version=3.2.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Reface.EventBus.3.3.2.1\lib\net40\Reface.EventBus.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.15.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.15.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleJson-Net45">
+      <HintPath>..\..\..\..\..\..\中控PDA\安保调度台0512\Debug\SimpleJson-Net45.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TinyMapper, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyMapper.3.0.3\lib\net40\TinyMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Core.3.0.0\lib\net45\Vlc.DotNet.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Core.Interops, Version=3.0.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Core.Interops.3.0.0\lib\net45\Vlc.DotNet.Core.Interops.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Forms, Version=3.0.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Forms.3.0.0\lib\net45\Vlc.DotNet.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="websocket-sharp, Version=1.0.1.0, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocketSharp-netstandard.1.0.1\lib\net45\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="zlib.net">
+      <HintPath>..\..\..\..\..\myproject\LiteAVSDK_TRTC_CSharp\TRTC-API-Example-CSharp\thirdparty\zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AddFixGrpMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddFixGrpMemberForm.Designer.cs">
+      <DependentUpon>AddFixGrpMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\KickOffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\KickOffForm.Designer.cs">
+      <DependentUpon>KickOffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agora\AgoraAVInviteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agora\AgoraAVInviteForm.Designer.cs">
+      <DependentUpon>AgoraAVInviteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agora\AVLive\AVLiveCenterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agora\AVLive\AVLiveCenterForm.Designer.cs">
+      <DependentUpon>AVLiveCenterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agora\ConfigHelper.cs" />
+    <Compile Include="Agora\Controls\LiveUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Agora\Controls\LiveUserControl.Designer.cs">
+      <DependentUpon>LiveUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agora\IEngine.cs" />
+    <Compile Include="Agora\JoinChannelVideo.cs" />
+    <Compile Include="Agora\JoinChannelVideoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agora\JoinChannelVideoView.Designer.cs">
+      <DependentUpon>JoinChannelVideoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agora\Meeting\AgoraMeetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agora\Meeting\AgoraMeetForm.Designer.cs">
+      <DependentUpon>AgoraMeetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agora\Meeting\AgoraScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agora\Meeting\AgoraScreenForm.Designer.cs">
+      <DependentUpon>AgoraScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agora\Meeting\AgoraToastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agora\Meeting\AgoraToastForm.Designer.cs">
+      <DependentUpon>AgoraToastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AudioQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AudioQueryForm.Designer.cs">
+      <DependentUpon>AudioQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AVDeviceError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AVDeviceError.Designer.cs">
+      <DependentUpon>AVDeviceError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BroadCast\BroadCastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BroadCast\BroadCastForm.Designer.cs">
+      <DependentUpon>BroadCastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BroadCast\MeetChat.cs" />
+    <Compile Include="Forms\BroadCast\RecorderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BroadCast\RecorderForm.Designer.cs">
+      <DependentUpon>RecorderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BroadCast\SelUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BroadCast\SelUserForm.Designer.cs">
+      <DependentUpon>SelUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BroadCast\TempTalkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BroadCast\TempTalkForm.Designer.cs">
+      <DependentUpon>TempTalkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BroadCast\UserControlBroad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\BroadCast\UserControlBroad.Designer.cs">
+      <DependentUpon>UserControlBroad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ColumnCustomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ColumnCustomForm.Designer.cs">
+      <DependentUpon>ColumnCustomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Comm\DirUtils.cs" />
+    <Compile Include="Tools\Comm\GroupUtils.cs" />
+    <Compile Include="Tools\Comm\Util.cs" />
+    <Compile Include="Forms\ControlLoginNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ControlLoginNew.Designer.cs">
+      <DependentUpon>ControlLoginNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ControlMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ControlMainForm.Designer.cs">
+      <DependentUpon>ControlMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ControlMainForm.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlMainForm.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ControlMainForm_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateTmpGrp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateTmpGrp.Designer.cs">
+      <DependentUpon>CreateTmpGrp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateTmpGrpMulti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateTmpGrpMulti.Designer.cs">
+      <DependentUpon>CreateTmpGrpMulti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntity\GroupTypeEnum.cs" />
+    <Compile Include="DataEntity\AudioRec.cs" />
+    <Compile Include="DataEntity\BaiduGeoLat.cs" />
+    <Compile Include="DataEntity\BindingCollection.cs" />
+    <Compile Include="DataEntity\CommExists.cs" />
+    <Compile Include="DataEntity\CommResult.cs" />
+    <Compile Include="DataEntity\ControlVideoStateEnum.cs" />
+    <Compile Include="DataEntity\DataGridViewTOPdf.cs" />
+    <Compile Include="DataEntity\DayTrack.cs" />
+    <Compile Include="DataEntity\ExecuteResult.cs" />
+    <Compile Include="DataEntity\FenceAlarm.cs" />
+    <Compile Include="DataEntity\FenceAlarmNotify.cs" />
+    <Compile Include="DataEntity\FenceInfo.cs" />
+    <Compile Include="DataEntity\FileResult.cs" />
+    <Compile Include="DataEntity\Group.cs" />
+    <Compile Include="DataEntity\GroupTemp.cs" />
+    <Compile Include="DataEntity\GroupUserItem.cs" />
+    <Compile Include="DataEntity\Group_IDName.cs" />
+    <Compile Include="DataEntity\LiveMedia.cs" />
+    <Compile Include="DataEntity\LocationEx.cs" />
+    <Compile Include="DataEntity\Location.cs" />
+    <Compile Include="DataEntity\MapinfoMessage.cs" />
+    <Compile Include="DataEntity\MoniUserQuery.cs" />
+    <Compile Include="DataEntity\MyKeyValue.cs" />
+    <Compile Include="DataEntity\MyMenuStripColorTable.cs" />
+    <Compile Include="DataEntity\ObjectPropertyCompare.cs" />
+    <Compile Include="DataEntity\PageQueryTotal.cs" />
+    <Compile Include="DataEntity\POCSessionRec.cs" />
+    <Compile Include="DataEntity\SipSubscriber.cs" />
+    <Compile Include="DataEntity\UpdateSOSLoc.cs" />
+    <Compile Include="DataEntity\User.cs" />
+    <Compile Include="DataEntity\UserCallSession.cs" />
+    <Compile Include="DataEntity\User_IDName.cs" />
+    <Compile Include="DataEntity\VideoLayoutMode.cs" />
+    <Compile Include="DataEntity\VideoRec.cs" />
+    <Compile Include="Forms\DateTimeSelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DateTimeSelForm.Designer.cs">
+      <DependentUpon>DateTimeSelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DayTimeSel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DayTimeSel.Designer.cs">
+      <DependentUpon>DayTimeSel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DelTmpGrpMulti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DelTmpGrpMulti.Designer.cs">
+      <DependentUpon>DelTmpGrpMulti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\DESEncrypt.cs" />
+    <Compile Include="Forms\DownFilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DownFilesForm.Designer.cs">
+      <DependentUpon>DownFilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ExeToWinform.cs" />
+    <Compile Include="Tools\ExportToExcel.cs" />
+    <Compile Include="Forms\FenceRuleDef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FenceRuleDef.Designer.cs">
+      <DependentUpon>FenceRuleDef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FenceRuleItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FenceRuleItemForm.Designer.cs">
+      <DependentUpon>FenceRuleItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fence\AlarmMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fence\AlarmMessageForm.Designer.cs">
+      <DependentUpon>AlarmMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HttpAPI.cs" />
+    <Compile Include="HttpAPI_Async.cs" />
+    <Compile Include="HttpRequestFactory.cs" />
+    <Compile Include="Tools\LocalSharedData.cs" />
+    <Compile Include="Forms\LocalVideoViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LocalVideoViewForm.Designer.cs">
+      <DependentUpon>LocalVideoViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\MediaPlayer.cs" />
+    <Compile Include="Forms\MediaPlayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MediaPlayForm.Designer.cs">
+      <DependentUpon>MediaPlayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\MiscExtensions.cs" />
+    <Compile Include="Forms\MsgPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MsgPopupForm.Designer.cs">
+      <DependentUpon>MsgPopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MySysConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MySysConfig.Designer.cs">
+      <DependentUpon>MySysConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OnePOCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OnePOCForm.Designer.cs">
+      <DependentUpon>OnePOCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonCallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonCallForm.Designer.cs">
+      <DependentUpon>PersonCallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonCallForm.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonCallForm.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Record\MyRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Record\MyRecordForm.Designer.cs">
+      <DependentUpon>MyRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RecQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RecQueryForm.Designer.cs">
+      <DependentUpon>RecQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\RegisterJSObject.cs" />
+    <Compile Include="Forms\RequestGPSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RequestGPSForm.Designer.cs">
+      <DependentUpon>RequestGPSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Dev\GenerateTestUserSig.cs" />
+    <Compile Include="Service\Dev\TLSSigAPIv2.cs" />
+    <Compile Include="Service\Entity\AVLiveStatusEnum.cs" />
+    <Compile Include="Service\Entity\FenceAlarmNotifyDto.cs" />
+    <Compile Include="Service\Entity\FenceUserDto.cs" />
+    <Compile Include="Service\Entity\GroupDto.cs" />
+    <Compile Include="Service\Entity\GroupTempDto.cs" />
+    <Compile Include="Service\Entity\LivePushDto.cs" />
+    <Compile Include="Service\Entity\LivePushItem.cs" />
+    <Compile Include="Service\Entity\RegionChinaDto.cs" />
+    <Compile Include="Service\Entity\SocketMessage.cs" />
+    <Compile Include="Service\Entity\SoslogDto.cs" />
+    <Compile Include="Service\Entity\UserAudioRecDto.cs" />
+    <Compile Include="Service\Entity\User_Old.cs" />
+    <Compile Include="Service\Local\GroupService.cs" />
+    <Compile Include="Service\Local\MMDeviceService.cs" />
+    <Compile Include="Tools\Log.cs" />
+    <Compile Include="Service\Model\AgoraChannelActiveResponse.cs" />
+    <Compile Include="Service\Model\AgoraRtcTokenResponse.cs" />
+    <Compile Include="Service\Model\AllFenceInfoResponse.cs" />
+    <Compile Include="Service\Model\AllFenceUserInfoResponse.cs" />
+    <Compile Include="Service\Model\FenceAlarmNotifyInfoResponse.cs" />
+    <Compile Include="Service\Model\GroupCustomerVoResponse.cs" />
+    <Compile Include="Service\Model\GroupListResponse.cs" />
+    <Compile Include="Service\Model\GroupTempListResponse.cs" />
+    <Compile Include="Service\Model\GroupUserMemberResponse.cs" />
+    <Compile Include="Service\Model\LoginResponse.cs" />
+    <Compile Include="Service\Model\MultiFenceAlarmNotifyInfoResponse.cs" />
+    <Compile Include="Service\Model\PageResponseBase.cs" />
+    <Compile Include="Service\Model\PttUserInfoResponse.cs" />
+    <Compile Include="Service\Model\PttUserLoginForm.cs" />
+    <Compile Include="Service\Model\PttUserOneResponse.cs" />
+    <Compile Include="Service\Model\RegionChinaResponse.cs" />
+    <Compile Include="Service\Model\ResponseBase.cs" />
+    <Compile Include="Service\Model\TempGroupResponse.cs" />
+    <Compile Include="Service\Model\UserAudioRecResponse.cs" />
+    <Compile Include="Service\PocAuthenticator.cs" />
+    <Compile Include="Service\PocClient.cs" />
+    <Compile Include="Service\PocConstant.cs" />
+    <Compile Include="Service\RestHelper.cs" />
+    <Compile Include="Forms\SessionQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SessionQueryForm.Designer.cs">
+      <DependentUpon>SessionQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOSPopUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOSPopUpForm.Designer.cs">
+      <DependentUpon>SOSPopUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TrackPlayBackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrackPlayBackForm.designer.cs">
+      <DependentUpon>TrackPlayBackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UriModifyExtensions.cs" />
+    <Compile Include="Tools\UriParseExtensions.cs" />
+    <Compile Include="Forms\UserBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserBaseForm.Designer.cs">
+      <DependentUpon>UserBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserGPSConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserGPSConfigForm.Designer.cs">
+      <DependentUpon>UserGPSConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserMoniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserMoniForm.Designer.cs">
+      <DependentUpon>UserMoniForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Utils.cs" />
+    <Compile Include="Forms\VideoQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VideoQueryForm.Designer.cs">
+      <DependentUpon>VideoQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VideoShareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VideoShareForm.Designer.cs">
+      <DependentUpon>VideoShareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\VlcPlayer.cs" />
+    <Compile Include="Forms\UserSetPrivInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserSetPrivInfoForm.Designer.cs">
+      <DependentUpon>UserSetPrivInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsStringResource.zh-TW.Designer.cs">
+      <DependentUpon>WinFormsStringResource.zh-TW.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="WinFormsStringResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinFormsStringResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsStringResource.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinFormsStringResource.en.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\AddFixGrpMemberForm.resx">
+      <DependentUpon>AddFixGrpMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\KickOffForm.resx">
+      <DependentUpon>KickOffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agora\AgoraAVInviteForm.resx">
+      <DependentUpon>AgoraAVInviteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agora\AVLive\AVLiveCenterForm.resx">
+      <DependentUpon>AVLiveCenterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agora\Controls\LiveUserControl.resx">
+      <DependentUpon>LiveUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agora\JoinChannelVideoView.resx">
+      <DependentUpon>JoinChannelVideoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agora\Meeting\AgoraMeetForm.resx">
+      <DependentUpon>AgoraMeetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agora\Meeting\AgoraScreenForm.resx">
+      <DependentUpon>AgoraScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agora\Meeting\AgoraToastForm.resx">
+      <DependentUpon>AgoraToastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AudioQueryForm.resx">
+      <DependentUpon>AudioQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AudioQueryForm.zh-TW.resx">
+      <DependentUpon>AudioQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AVDeviceError.resx">
+      <DependentUpon>AVDeviceError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AVDeviceError.zh-TW.resx">
+      <DependentUpon>AVDeviceError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BroadCast\BroadCastForm.resx">
+      <DependentUpon>BroadCastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BroadCast\RecorderForm.byn-ER.resx">
+      <DependentUpon>RecorderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BroadCast\RecorderForm.resx">
+      <DependentUpon>RecorderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BroadCast\SelUserForm.resx">
+      <DependentUpon>SelUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BroadCast\TempTalkForm.resx">
+      <DependentUpon>TempTalkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BroadCast\UserControlBroad.resx">
+      <DependentUpon>UserControlBroad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColumnCustomForm.resx">
+      <DependentUpon>ColumnCustomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControlLoginNew.resx">
+      <DependentUpon>ControlLoginNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControlMainForm.en-GB.resx">
+      <DependentUpon>ControlMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControlMainForm.en-US.resx">
+      <DependentUpon>ControlMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControlMainForm.en.resx">
+      <DependentUpon>ControlMainForm.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ControlMainForm.en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControlMainForm.resx">
+      <DependentUpon>ControlMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControlMainForm.zh-Hant.resx">
+      <DependentUpon>ControlMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControlMainForm.zh-TW.resx">
+      <DependentUpon>ControlMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTmpGrp.en-US.resx">
+      <DependentUpon>CreateTmpGrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTmpGrp.resx">
+      <DependentUpon>CreateTmpGrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTmpGrp.zh-TW.resx">
+      <DependentUpon>CreateTmpGrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTmpGrpMulti.en-US.resx">
+      <DependentUpon>CreateTmpGrpMulti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTmpGrpMulti.resx">
+      <DependentUpon>CreateTmpGrpMulti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTmpGrpMulti.zh-TW.resx">
+      <DependentUpon>CreateTmpGrpMulti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DateTimeSelForm.resx">
+      <DependentUpon>DateTimeSelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DayTimeSel.en-US.resx">
+      <DependentUpon>DayTimeSel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DayTimeSel.resx">
+      <DependentUpon>DayTimeSel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DayTimeSel.zh-TW.resx">
+      <DependentUpon>DayTimeSel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DelTmpGrpMulti.en-US.resx">
+      <DependentUpon>DelTmpGrpMulti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DelTmpGrpMulti.resx">
+      <DependentUpon>DelTmpGrpMulti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DelTmpGrpMulti.zh-TW.resx">
+      <DependentUpon>DelTmpGrpMulti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DownFilesForm.en-US.resx">
+      <DependentUpon>DownFilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DownFilesForm.resx">
+      <DependentUpon>DownFilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DownFilesForm.zh-TW.resx">
+      <DependentUpon>DownFilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FenceRuleDef.en-US.resx">
+      <DependentUpon>FenceRuleDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FenceRuleDef.resx">
+      <DependentUpon>FenceRuleDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FenceRuleDef.zh-TW.resx">
+      <DependentUpon>FenceRuleDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FenceRuleItemForm.en-US.resx">
+      <DependentUpon>FenceRuleItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FenceRuleItemForm.resx">
+      <DependentUpon>FenceRuleItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FenceRuleItemForm.zh-TW.resx">
+      <DependentUpon>FenceRuleItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fence\AlarmMessageForm.resx">
+      <DependentUpon>AlarmMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalVideoViewForm.resx">
+      <DependentUpon>LocalVideoViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MediaPlayForm.resx">
+      <DependentUpon>MediaPlayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MsgPopupForm.resx">
+      <DependentUpon>MsgPopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MySysConfig.en-US.resx">
+      <DependentUpon>MySysConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MySysConfig.resx">
+      <DependentUpon>MySysConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MySysConfig.zh-TW.resx">
+      <DependentUpon>MySysConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OnePOCForm.en-US.resx">
+      <DependentUpon>OnePOCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OnePOCForm.resx">
+      <DependentUpon>OnePOCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OnePOCForm.zh-TW.resx">
+      <DependentUpon>OnePOCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonCallForm.en.resx">
+      <DependentUpon>PersonCallForm.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonCallForm.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonCallForm.resx">
+      <DependentUpon>PersonCallForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Record\MyRecordForm.resx">
+      <DependentUpon>MyRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RecQueryForm.resx">
+      <DependentUpon>RecQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RecQueryForm.zh-TW.resx">
+      <DependentUpon>RecQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RequestGPSForm.resx">
+      <DependentUpon>RequestGPSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SessionQueryForm.resx">
+      <DependentUpon>SessionQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SessionQueryForm.zh-TW.resx">
+      <DependentUpon>SessionQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOSPopUpForm.resx">
+      <DependentUpon>SOSPopUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrackPlayBackForm.resx">
+      <DependentUpon>TrackPlayBackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserBaseForm.resx">
+      <DependentUpon>UserBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserGPSConfigForm.resx">
+      <DependentUpon>UserGPSConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserMoniForm.en-US.resx">
+      <DependentUpon>UserMoniForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserMoniForm.resx">
+      <DependentUpon>UserMoniForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserMoniForm.zh-TW.resx">
+      <DependentUpon>UserMoniForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VideoQueryForm.resx">
+      <DependentUpon>VideoQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VideoQueryForm.zh-TW.resx">
+      <DependentUpon>VideoQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VideoShareForm.resx">
+      <DependentUpon>VideoShareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserSetPrivInfoForm.en-US.resx">
+      <DependentUpon>UserSetPrivInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserSetPrivInfoForm.resx">
+      <DependentUpon>UserSetPrivInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserSetPrivInfoForm.zh-TW.resx">
+      <DependentUpon>UserSetPrivInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsStringResource.zh-TW.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WinFormsStringResource.zh-TW.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsStringResource.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WinFormsStringResource.en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsStringResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WinFormsStringResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="bin\x86\Debug\config.json" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\POCControlCenter.DataDapper.DapperUser.datasource" />
+    <None Include="Properties\DataSources\POCControlCenter.DataEntity.DayTrack.datasource" />
+    <None Include="Properties\DataSources\POCControlCenter.DataEntity.FenceAlarmNotify.datasource" />
+    <None Include="Properties\DataSources\POCControlCenter.DataEntity.Location.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POCClientNetLibrary\POCClientNetLibrary.csproj">
+      <Project>{F03782CF-CDE1-450E-9B26-E0578D7BC656}</Project>
+      <Name>POCClientNetLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon_offline.png" />
+    <None Include="Resources\user_icon_online.png" />
+    <None Include="Resources\VoiceTalkBg.png" />
+    <None Include="Resources\vc_snap.png" />
+    <None Include="Resources\videocalling1.png" />
+    <None Include="Resources\vc_switch.png" />
+    <None Include="Resources\logo-removebg-preview.png" />
+    <None Include="Resources\btn_endcall_normal.png" />
+    <None Include="Resources\btn_audio_close1.png" />
+    <None Include="Resources\btn_audio_open1.png" />
+    <None Include="Resources\btn_camera_close1.png" />
+    <None Include="Resources\btn_camera_open1.png" />
+    <None Include="Resources\btn_startcall_normal.png" />
+    <None Include="Resources\m_feiyuu_logo.png" />
+    <None Include="Resources\pc_login.png" />
+    <None Include="Resources\pc_logo.png" />
+    <None Include="Resources\ComIO_Logo_237_67.png" />
+    <None Include="Resources\logo图标.png" />
+    <Content Include="icon.ico" />
+    <None Include="Resources\camera_switch.png" />
+    <None Include="Resources\ic_action_switch_camera.png" />
+    <None Include="Resources\mico_open.png" />
+    <None Include="Resources\talk_button.png" />
+    <None Include="Resources\kick_user.png" />
+    <None Include="Resources\talk_mic_pressed.png" />
+    <None Include="Resources\pc_log.png" />
+    <Content Include="Resources\trtcbtn\MuteOff.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcbtn\MuteOn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcbtn\OpenFile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcbtn\Pause.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcbtn\Play.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcbtn\SpeedDown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcbtn\SpeedUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcbtn\Stop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcres\BGM.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcres\clap.aac">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcres\gift_sent.aac">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcres\on_mic.aac">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcres\testspeak.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\trtcskin\close_normal.png" />
+    <Content Include="Resources\trtcskin\close_white.png" />
+    <Content Include="Resources\trtcskin\logo_court.png" />
+    <Content Include="Resources\trtcskin\logo_court_demo.png" />
+    <None Include="Resources\top_layout_min2.png" />
+    <None Include="Resources\page_endx.png" />
+    <None Include="Resources\page_nextx.png" />
+    <None Include="Resources\page_prevx.png" />
+    <None Include="Resources\page_firstx.png" />
+    <None Include="Resources\top_recorderx_min.png" />
+    <None Include="Resources\top_im_min.png" />
+    <None Include="Resources\top_monitor_min.png" />
+    <None Include="Resources\top_alarmx2_min.png" />
+    <None Include="Resources\top_syscfg_min.png" />
+    <None Include="Resources\password_min2.png" />
+    <None Include="Resources\top_layout_min.png" />
+    <None Include="Resources\top_recorderx.png" />
+    <None Include="Resources\top_alarmx2.png" />
+    <None Include="Resources\password_x.png" />
+    <None Include="Resources\trtcres\16_1_audio.pcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\trtcres\320x240_video.yuv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\trtcres\48_1_audio.pcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\user_track.png" />
+    <None Include="Resources\user_record_av.png" />
+    <None Include="Resources\user_gps1.png" />
+    <None Include="Resources\user_gps.png" />
+    <None Include="Resources\user_tickoff.png" />
+    <None Include="Resources\user_location.png" />
+    <None Include="Resources\user_priv.png" />
+    <None Include="Resources\user_monitor.png" />
+    <None Include="Resources\user_talk_single.png" />
+    <None Include="Resources\user_vedio_double.png" />
+    <None Include="Resources\user_voice_double.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\page_next.png" />
+    <None Include="Resources\page_prev.png" />
+    <None Include="Resources\page_end.png" />
+    <None Include="Resources\page_first.png" />
+    <None Include="Resources\头像.png" />
+    <None Include="Resources\top_talkx.png" />
+    <None Include="Resources\switchgroup.png" />
+    <None Include="Resources\top_alarmx.png" />
+    <None Include="Resources\top_logox3.png" />
+    <None Include="Resources\top_logox2.png" />
+    <None Include="Resources\top_logox.png" />
+    <None Include="Resources\logo_lefttop.png" />
+    <None Include="Resources\top_recorder.png" />
+    <None Include="Resources\top_im.png" />
+    <None Include="Resources\top_monitor.png" />
+    <None Include="Resources\top_alarm.png" />
+    <None Include="Resources\top_layout.png" />
+    <None Include="Resources\top_syscfg.png" />
+    <None Include="Resources\mainwnd_restore.png" />
+    <None Include="Resources\mainwnd_fullscreen.png" />
+    <None Include="Resources\mainwnd_min1.png" />
+    <None Include="Resources\mainwnd_min.png" />
+    <None Include="Resources\mainwnd_close1.png" />
+    <None Include="Resources\mainwnd_close.png" />
+    <None Include="Resources\矩形 11.png" />
+    <None Include="Resources\logo_login1.png" />
+    <None Include="Resources\logo_login.png" />
+    <None Include="Resources\矩形 1.png" />
+    <None Include="Resources\result_prev.png" />
+    <None Include="Resources\result_next.png" />
+    <None Include="Resources\result_last.png" />
+    <None Include="Resources\result_first.png" />
+    <None Include="Resources\SOS.png" />
+    <None Include="Resources\message.png" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\speak.png" />
+    <None Include="Resources\morerec.png" />
+    <None Include="Resources\manuser.png" />
+    <None Include="Resources\tvmode.png" />
+    <None Include="Resources\toplayout_u.png" />
+    <None Include="Resources\search_2.png" />
+    <None Include="Resources\search_1.png" />
+    <None Include="Resources\sos_gps_fail.png" />
+    <None Include="Resources\notify_sos_num_.png" />
+    <None Include="Resources\notify_sos.png" />
+    <None Include="Resources\map_loading.gif" />
+    <None Include="Resources\syscfg_u.png" />
+    <None Include="Resources\syscfg.png" />
+    <None Include="Resources\recquery_u.png" />
+    <None Include="Resources\recquery.png" />
+    <None Include="Resources\m_video_u.png" />
+    <None Include="Resources\m_video.png" />
+    <None Include="Resources\m_message_u.png" />
+    <None Include="Resources\m_message.png" />
+    <None Include="Resources\m_map_u.png" />
+    <None Include="Resources\m_map.png" />
+    <None Include="Resources\query_btn.png" />
+    <None Include="Resources\titledesc.png" />
+    <None Include="Resources\user_touxiang.png" />
+    <None Include="Resources\vlayout_20_s.png" />
+    <None Include="Resources\vlayout_20.png" />
+    <None Include="Resources\vlayout_16_s.png" />
+    <None Include="Resources\vlayout_16.png" />
+    <None Include="Resources\vlayout_12_s.png" />
+    <None Include="Resources\vlayout_12.png" />
+    <None Include="Resources\vlayout_9_s.png" />
+    <None Include="Resources\vlayout_9.png" />
+    <None Include="Resources\vlayout_8_s.png" />
+    <None Include="Resources\vlayout_8.png" />
+    <None Include="Resources\vlayout_6_s.png" />
+    <None Include="Resources\vlayout_6.png" />
+    <None Include="Resources\vlayout_4_s.png" />
+    <None Include="Resources\vlayout_4.png" />
+    <None Include="Resources\tmpcall_cfg.png" />
+    <None Include="Resources\onetrack1.png" />
+    <None Include="Resources\priv_voicerecord.png" />
+    <None Include="Resources\priv_huaquan.png" />
+    <None Include="Resources\priv_yaoyun.png" />
+    <None Include="Resources\tmpvideo.png" />
+    <None Include="Resources\tmpcall1.png" />
+    <None Include="Resources\videocall_over1.png" />
+    <None Include="Resources\voicecall_over1.png" />
+    <None Include="Resources\oneloc1.png" />
+    <None Include="Resources\talk_disable.png" />
+    <None Include="Resources\talk_allow.png" />
+    <None Include="Resources\onetrack.png" />
+    <None Include="Resources\videocall_over.png" />
+    <None Include="Resources\oneloc.png" />
+    <None Include="Resources\tmpcall.png" />
+    <None Include="Resources\voicecall_over.png" />
+    <None Include="Resources\video_bg.jpg" />
+    <None Include="Resources\voice_call.gif" />
+    <None Include="Resources\video_hangup.png" />
+    <None Include="Resources\voice_call.jpg" />
+    <None Include="Resources\play_18.png" />
+    <None Include="Resources\video.png" />
+    <None Include="Resources\mail_yellow.png" />
+    <None Include="Resources\page.png" />
+    <None Include="Resources\POC图标设计-52.png" />
+    <None Include="bin\Release\shengbo_bar.gif" />
+    <None Include="bin\Debug\map\baidumap\img\轨迹回放.png" />
+    <None Include="bin\x86\Debug\login_bg.png" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\shengbo_bar.gif" />
+    <None Include="Resources\prev.png" />
+    <None Include="Resources\下载.gif" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\OmniWeb.ico" />
+    <None Include="Resources\bk2012011410361007.gif" />
+    <None Include="Resources\f16c982ff312b22dfa2d3c83c0d38c0f.png" />
+    <None Include="Resources\d_addgrp.png" />
+    <None Include="Resources\d_banner.jpg" />
+    <None Include="Resources\d_delgrp.png" />
+    <None Include="Resources\d_nospeak.png" />
+    <None Include="Resources\d_sendtext.png" />
+    <None Include="Resources\d_speak.png" />
+    <None Include="Resources\d_addgrp40.png" />
+    <None Include="Resources\d_delgrp40.png" />
+    <None Include="Resources\d_nospeak40.png" />
+    <None Include="Resources\d_sendtext40.png" />
+    <None Include="Resources\d_speak40.png" />
+    <None Include="Resources\download_file.gif" />
+    <None Include="Resources\3最前一页.png" />
+    <None Include="Resources\firsta.png" />
+    <None Include="Resources\after.png" />
+    <None Include="Resources\lasta.png" />
+    <None Include="Resources\comments.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\green40.png" />
+    <None Include="Resources\globalquery2.png" />
+    <None Include="Resources\download_file_18.gif" />
+    <None Include="Resources\events.png" />
+    <None Include="Resources\globalquery3.png" />
+    <None Include="Resources\global_query.png" />
+    <None Include="Resources\d_addgrp401.png" />
+    <None Include="Resources\d_delgrp401.png" />
+    <None Include="Resources\globalquery31.png" />
+    <None Include="Resources\d_sendtext401.png" />
+    <None Include="Resources\login_logo.png" />
+    <None Include="Resources\login_bg.png" />
+    <None Include="Resources\column_sort.png" />
+    <None Include="Resources\add_dept.png" />
+    <None Include="Resources\item_add.png" />
+    <None Include="Resources\basedata1.png" />
+    <None Include="Resources\item_del.png" />
+    <None Include="Resources\item_refresh.png" />
+    <None Include="Resources\col_edit.png" />
+    <None Include="Resources\col_del.png" />
+    <None Include="Resources\basedata.png" />
+    <None Include="Resources\basedata_u.png" />
+    <None Include="Resources\global_cfg.png" />
+    <None Include="Resources\global_cfg_u.png" />
+    <None Include="Resources\hrmanage.png" />
+    <None Include="Resources\hrmanage_u.png" />
+    <None Include="Resources\1084804560259711326.jpg" />
+    <None Include="Resources\JkOpmVM0vr_副本.png" />
+    <None Include="Resources\addgrp.png" />
+    <None Include="Resources\delgrp.png" />
+    <None Include="Resources\grouploc.png" />
+    <None Include="Resources\login_bg1.png" />
+    <None Include="Resources\login_bg2.png" />
+    <None Include="Resources\current_user.png" />
+    <None Include="Resources\addgroupx.png" />
+    <None Include="Resources\delgroupx.png" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\lang.png" />
+    <None Include="Resources\grp_fence.png" />
+    <None Include="Resources\layout_g4.png" />
+    <None Include="Resources\layout_g6.png" />
+    <None Include="Resources\layout_g6x.png" />
+    <None Include="Resources\layout_g8.png" />
+    <None Include="Resources\layout_g9.png" />
+    <None Include="Resources\layout_g12.png" />
+    <None Include="Resources\layout_g16.png" />
+    <None Include="Resources\layout_g20.png" />
+    <None Include="Resources\login_logo.jpg" />
+    <None Include="Resources\account_x.png" />
+    <None Include="Resources\lang_x.png" />
+    <None Include="Resources\login_logo_x.png" />
+    <None Include="Resources\login_logo_x1.png" />
+    <None Include="Resources\account_min.png" />
+    <None Include="Resources\account_min2.png" />
+    <None Include="Resources\lang_min2.png" />
+    <None Include="Resources\layout_g6_x2.png" />
+    <None Include="Resources\layout_g9x.png" />
+    <Content Include="Resources\logo_icon2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.73.1.13\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.73.1.13\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.73.1.13\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.73.1.13\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.73.1.130\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.73.1.130\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.73.1.130\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.73.1.130\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.73.1.130\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.73.1.130\build\CefSharp.WinForms.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.73.1.130\build\CefSharp.WinForms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.73.1.130\build\CefSharp.WinForms.targets'))" />
+    <Error Condition="!Exists('..\packages\VideoLAN.LibVLC.Windows.3.0.7.1\build\VideoLAN.LibVLC.Windows.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\VideoLAN.LibVLC.Windows.3.0.7.1\build\VideoLAN.LibVLC.Windows.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.1418.22\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.1418.22\build\Microsoft.Web.WebView2.targets'))" />
+    <Error Condition="!Exists('..\packages\agora_rtc_sdk.3.7.2.245\build\net40\agora_rtc_sdk.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\agora_rtc_sdk.3.7.2.245\build\net40\agora_rtc_sdk.props'))" />
+    <Error Condition="!Exists('..\packages\agora_rtc_sdk.3.7.2.245\build\net40\agora_rtc_sdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\agora_rtc_sdk.3.7.2.245\build\net40\agora_rtc_sdk.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.73.1.130\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.73.1.130\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.WinForms.73.1.130\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.73.1.130\build\CefSharp.WinForms.targets')" />
+  <Import Project="..\packages\VideoLAN.LibVLC.Windows.3.0.7.1\build\VideoLAN.LibVLC.Windows.targets" Condition="Exists('..\packages\VideoLAN.LibVLC.Windows.3.0.7.1\build\VideoLAN.LibVLC.Windows.targets')" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.1418.22\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.1418.22\build\Microsoft.Web.WebView2.targets')" />
+  <Import Project="..\packages\agora_rtc_sdk.3.7.2.245\build\net40\agora_rtc_sdk.targets" Condition="Exists('..\packages\agora_rtc_sdk.3.7.2.245\build\net40\agora_rtc_sdk.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

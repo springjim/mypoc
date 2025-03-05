@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Login_ErrorText1" xml:space="preserve">
+    <value>帳號不能為空！</value>
+  </data>
+  <data name="Login_ErrorText2" xml:space="preserve">
+    <value>密碼不能為空！</value>
+  </data>
+  <data name="Login_ErrorText3" xml:space="preserve">
+    <value>帳號或密碼錯誤！</value>
+  </data>
+  <data name="Main_buttonTALK_Text1" xml:space="preserve">
+    <value>按住對講</value>
+  </data>
+  <data name="Main_buttonTALK_Text2" xml:space="preserve">
+    <value>停止對講</value>
+  </data>
+  <data name="Main_FileTrnText1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Main_FileTrnText2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Main_FileTrnText3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Main_FileTrnText4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Main_FileTrnText5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Main_labelACCOUNT_sub1" xml:space="preserve">
+    <value>登入用戶名</value>
+  </data>
+  <data name="Main_labelACCOUNT_sub2" xml:space="preserve">
+    <value>組名</value>
+  </data>
+  <data name="Main_labelPlayerName_Text" xml:space="preserve">
+    <value>正在說話…</value>
+  </data>
+  <data name="Main_RTBRecord_s1" xml:space="preserve">
+    <value>無法打開連結</value>
+  </data>
+  <data name="Main_RTBRecord_s2" xml:space="preserve">
+    <value>系統提示</value>
+  </data>
+  <data name="Main_timerPOCrobMIC_s1" xml:space="preserve">
+    <value>對講中</value>
+  </data>
+  <data name="Main_timerPOCrobMIC_s2" xml:space="preserve">
+    <value>秒</value>
+  </data>
+  <data name="Main_trtSendFile_s1" xml:space="preserve">
+    <value>所有檔案</value>
+  </data>
+  <data name="Main_trtSendFile_s2" xml:space="preserve">
+    <value>上傳文件</value>
+  </data>
+  <data name="Main_trtSendFile_s3" xml:space="preserve">
+    <value>大小</value>
+  </data>
+  <data name="Main_trtSendFile_s4" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="Main_trtSendFile_s5" xml:space="preserve">
+    <value>您已經取消了檔案</value>
+  </data>
+  <data name="Main_trtSendFile_s6" xml:space="preserve">
+    <value>的傳輸</value>
+  </data>
+  <data name="Main_trtSendFile_s7" xml:space="preserve">
+    <value>檔案</value>
+  </data>
+  <data name="Main_trtSendFile_s8" xml:space="preserve">
+    <value>已經傳輸完成</value>
+  </data>
+  <data name="Main_trtSendFile_s9" xml:space="preserve">
+    <value>已經傳輸完成，保存路徑</value>
+  </data>
+  <data name="Main_trtSendPicture_s1" xml:space="preserve">
+    <value>影像檔案</value>
+  </data>
+  <data name="Main_trtSendPicture_s2" xml:space="preserve">
+    <value>當前版本不支持發送大於10M的圖片，請使用發送檔案功能來發送</value>
+  </data>
+  <data name="Main_trtSendPicture_s3" xml:space="preserve">
+    <value>系統提示</value>
+  </data>
+  <data name="PersonCall_Text1" xml:space="preserve">
+    <value>沒有找到名字..</value>
+  </data>
+  <data name="PersonCall_Text2" xml:space="preserve">
+    <value>來電…</value>
+  </data>
+  <data name="PersonCall_Text3" xml:space="preserve">
+    <value>正在呼叫…</value>
+  </data>
+  <data name="PersonCall_Text4" xml:space="preserve">
+    <value>響鈴</value>
+  </data>
+  <data name="PersonCall_Text5" xml:space="preserve">
+    <value>秒</value>
+  </data>
+  <data name="LocationBaiduMAP" xml:space="preserve">
+    <value>baidumap_google.jsp</value>
+  </data>
+  <data name="LocationFenceMAP" xml:space="preserve">
+    <value>baidu_fence_google.jsp</value>
+  </data>
+  <data name="LocationTrackMAP" xml:space="preserve">
+    <value>baidu_trackback_google.jsp</value>
+  </data>
+  <data name="p2pFilesSend_s1" xml:space="preserve">
+    <value>上傳文件…</value>
+  </data>
+  <data name="p2pFilesSend_s2" xml:space="preserve">
+    <value>上傳等待您接收檔案…</value>
+  </data>
+  <data name="p2pFilesSend_s3" xml:space="preserve">
+    <value>位元組</value>
+  </data>
+  <data name="p2pFilesSend_s4" xml:space="preserve">
+    <value>未知大小</value>
+  </data>
+  <data name="p2pFilesSend_s5" xml:space="preserve">
+    <value>確定要終止檔案的傳輸嗎？</value>
+  </data>
+  <data name="p2pFilesSend_s6" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="p2pFilesSend_s7" xml:space="preserve">
+    <value>檔案</value>
+  </data>
+  <data name="p2pFilesSend_s8" xml:space="preserve">
+    <value>正在發送檔案…</value>
+  </data>
+  <data name="p2pFilesSend_s9" xml:space="preserve">
+    <value>正在接收檔案…</value>
+  </data>
+  <data name="CreateTmpGrpNameISNull" xml:space="preserve">
+    <value>名稱不允許為空</value>
+  </data>
+  <data name="SelectTmpGrp" xml:space="preserve">
+    <value>請選擇臨時組</value>
+  </data>
+  <data name="DateSpanMustLess7days" xml:space="preserve">
+    <value>時間跨度不能超過7天</value>
+  </data>
+  <data name="EnterGrpName" xml:space="preserve">
+    <value>請輸入組名稱</value>
+  </data>
+  <data name="FromDateMustBeforeToDate" xml:space="preserve">
+    <value>超始時間不能大於終止時間</value>
+  </data>
+  <data name="PromptStr" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="QuestionStopLive" xml:space="preserve">
+    <value>確定停止直播嗎？</value>
+  </data>
+  <data name="QuestionStopMoni" xml:space="preserve">
+    <value>確定停止監控嗎？</value>
+  </data>
+  <data name="SelectUser" xml:space="preserve">
+    <value>請選擇人員</value>
+  </data>
+  <data name="StatusOffline" xml:space="preserve">
+    <value>離線</value>
+  </data>
+  <data name="StatusOnline" xml:space="preserve">
+    <value>線上</value>
+  </data>
+  <data name="TmpGrpNameModifyPrompt" xml:space="preserve">
+    <value>修改臨時組名稱</value>
+  </data>
+  <data name="VideoMoniEndStrPrefix" xml:space="preserve">
+    <value>（結束，時長：</value>
+  </data>
+  <data name="VideoMoniEndStrSuffix" xml:space="preserve">
+    <value>秒）</value>
+  </data>
+  <data name="VideoMonitorApplyFail" xml:space="preserve">
+    <value>對方網絡訊號不好或者沒有登入，請稍後再試</value>
+  </data>
+  <data name="FenceAlarmNoNotifyConfirm" xml:space="preserve">
+    <value>確定不用通知嗎？</value>
+  </data>
+  <data name="FenceAlarmTypeINCOME" xml:space="preserve">
+    <value>進入警告</value>
+  </data>
+  <data name="FenceAlarmTypeOUTCOME" xml:space="preserve">
+    <value>出去警告</value>
+  </data>
+  <data name="FenceRuleBlkWht" xml:space="preserve">
+    <value>請選擇圍欄的名單類型（白名單或黑名單）</value>
+  </data>
+  <data name="FenceRulePerson" xml:space="preserve">
+    <value>請選擇人員</value>
+  </data>
+  <data name="FenceRuleType" xml:space="preserve">
+    <value>請選擇圍欄告警類型（進入或出去）</value>
+  </data>
+  <data name="FenceRuleDel" xml:space="preserve">
+    <value>確定要删除嗎？</value>
+  </data>
+  <data name="EnterValuePrompt" xml:space="preserve">
+    <value>請輸入值</value>
+  </data>
+  <data name="VideoMaxWindow" xml:space="preserve">
+    <value>最大化視窗</value>
+  </data>
+  <data name="VideoRestoreWindow" xml:space="preserve">
+    <value>還原視窗</value>
+  </data>
+  <data name="VideoVoiceClose" xml:space="preserve">
+    <value>關閉聲音</value>
+  </data>
+  <data name="VideoVoiceOpen" xml:space="preserve">
+    <value>打開聲音</value>
+  </data>
+  <data name="ExcelExportFail" xml:space="preserve">
+    <value>匯出异常</value>
+  </data>
+  <data name="ExcelExportSuccess" xml:space="preserve">
+    <value>匯出成功</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>無數據</value>
+  </data>
+  <data name="PDFExportFail" xml:space="preserve">
+    <value>不能匯出，因為沒有Simsun字體</value>
+  </data>
+  <data name="PDFExportSuccess" xml:space="preserve">
+    <value>PDF匯出成功</value>
+  </data>
+  <data name="SaveExcelFile" xml:space="preserve">
+    <value>保存Excel檔案</value>
+  </data>
+  <data name="FenceRuleAlreadyExist" xml:space="preserve">
+    <value>該圍欄規則已經存在了，不允許重複新增</value>
+  </data>
+  <data name="TmpGroupDelConfirm" xml:space="preserve">
+    <value>確認要删除臨時組嗎？</value>
+  </data>
+  <data name="NoFoundFenceDefine" xml:space="preserve">
+    <value>未有發現圍欄定義</value>
+  </data>
+  <data name="LifeState" xml:space="preserve">
+    <value>帳號狀態</value>
+  </data>
+  <data name="LifeState_0" xml:space="preserve">
+    <value>遙暈</value>
+  </data>
+  <data name="LifeState_1" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="LifeState_NE1" xml:space="preserve">
+    <value>遙斃</value>
+  </data>
+  <data name="VoiceRecord" xml:space="preserve">
+    <value>對講語音記錄</value>
+  </data>
+  <data name="VoiceRecord_CLOSE" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="VoiceRecord_OPEN" xml:space="preserve">
+    <value>打開</value>
+  </data>
+  <data name="VoiceRight" xml:space="preserve">
+    <value>對講話權</value>
+  </data>
+  <data name="VoiceRight_0" xml:space="preserve">
+    <value>普通話權</value>
+  </data>
+  <data name="VoiceRight_1" xml:space="preserve">
+    <value>優先話權</value>
+  </data>
+  <data name="VoiceRight_2" xml:space="preserve">
+    <value>最高話權</value>
+  </data>
+  <data name="FocreRemoveFrmFixGroupError" xml:space="preserve">
+    <value>禁止從固定組中强拆某成員（只有web管理員有許可權）</value>
+  </data>
+  <data name="LocationFenceAlarmMap" xml:space="preserve">
+    <value>baidu_fence_alarm_notify.jsp</value>
+    <comment>用于显示某个围栏的所有警告人员的位置地图显示</comment>
+  </data>
+  <data name="DelTmpGroupFail" xml:space="preserve">
+    <value>删除組失敗</value>
+  </data>
+  <data name="TalkP2P" xml:space="preserve">
+    <value>對講單呼</value>
+  </data>
+  <data name="TalkTo" xml:space="preserve">
+    <value>與</value>
+  </data>
+  <data name="Video_Live" xml:space="preserve">
+    <value>直播</value>
+  </data>
+  <data name="Video_Moni" xml:space="preserve">
+    <value>監控</value>
+  </data>
+  <data name="QueryPage" xml:space="preserve">
+    <value>頁</value>
+  </data>
+  <data name="QueryPerPage" xml:space="preserve">
+    <value>每頁</value>
+  </data>
+  <data name="QueryRecDESC" xml:space="preserve">
+    <value>條記錄</value>
+  </data>
+  <data name="QueryTotal" xml:space="preserve">
+    <value>共</value>
+  </data>
+  <data name="QueryInValid_PageNo" xml:space="preserve">
+    <value>輸入頁號無效</value>
+  </data>
+  <data name="PageNoFirstAlert" xml:space="preserve">
+    <value>已是第一頁了</value>
+  </data>
+  <data name="PageNoLastAlert" xml:space="preserve">
+    <value>已是最後頁了</value>
+  </data>
+  <data name="MediaState_ended" xml:space="preserve">
+    <value>播放結束</value>
+  </data>
+  <data name="MediaState_errored" xml:space="preserve">
+    <value>發現异常</value>
+  </data>
+  <data name="MediaState_opened" xml:space="preserve">
+    <value>打開中</value>
+  </data>
+  <data name="MediaState_playing" xml:space="preserve">
+    <value>播放中</value>
+  </data>
+  <data name="DeviceError_AudioInput" xml:space="preserve">
+    <value>設備异常，你無法對講和語音通話！</value>
+  </data>
+  <data name="DeviceError_AudioOutput" xml:space="preserve">
+    <value>設備异常，對方說的話你聽不到！</value>
+  </data>
+  <data name="DeviceError_VideoInput" xml:space="preserve">
+    <value>設備异常，會影響視頻通話，對方看不到你的畫面！</value>
+  </data>
+  <data name="DeviceNormal" xml:space="preserve">
+    <value>設備正常</value>
+  </data>
+  <data name="LoginWelcome" xml:space="preserve">
+    <value>歡迎登入多媒體指揮調度系統</value>
+  </data>
+</root>
