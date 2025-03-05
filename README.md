@@ -31,7 +31,7 @@
 
 
 ### 2、PC端
-![](image/pcoverview.png)
+![](images/pcoverview.png)
 基于Visual Studio 2017、.net framework 4.5.2+开发，主要功能有:  
 * 成员在线、离线状态同步
 * 语音呼叫
