@@ -7,7 +7,7 @@
 
 ### 1、软件架构
 
-![](image/architecture.png)
+![](https://github.com/springjim/mypoc/blob/main/images/architecture.png)
 
 平台是典型云服务器+微服务+C/S+B/S的架构，平台采用多租户模型，可以布署于公网，也可以灵活布署于局域网运行。
 
