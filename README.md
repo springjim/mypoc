@@ -50,7 +50,7 @@
 * PC屏幕分享
 * 集群广播
 ### 3、安卓端
-![](image/android_overview.png)
+![](images/android_overview.png)
 因为对讲采用实时采集麦克风，所以要解决业界的回音啸叫、自动增益、降噪、静音检测等问题，本端主要参考了 [Android-Audio-Processing-Using-WebRTC](https://github.com/mail2chromium/Android-Audio-Processing-Using-WebRTC)，
 > 在如下方面进行语音的3A处理
 * Acoustic Echo Cancellation (AEC)
@@ -72,7 +72,7 @@
 * 支持OTG USB2/USB3 外接UVC直播图传
 
 ### 4、Web端
-![](image/web_manager.png)
+![](images/web_manager.png)
 采用Vue2框架开发，主要功能有：
 * 系统管理（角色、权限与人员分配）
 * 巡更管理
@@ -84,16 +84,16 @@
 
 第一步：app中注册28181平台
 
-![](image/android28181reg.png)
+![](images/android28181reg.png)
 
 
 第二步：在国标视频监控平台实时点播
 
-![](image/platform28181.png)
+![](images/platform28181.png)
 
 目前终端已支持：前摄像头、后摄像头、UVC(USB OTG)摄像头接入28181
 
-![](image/android_gb28181.jpg)
+![](images/android_gb28181.jpg)
 
 
 
@@ -108,23 +108,23 @@
 提供PTT按键、SOS按键及其它定义键的键值或广播值，几乎全部能适配
 
 ### 2、公网对讲机（按键机型）
-![](image/hardware/binqi01.jpg)
-![](image/hardware/binqi02.jpg)
+![](images/hardware/binqi01.jpg)
+![](images/hardware/binqi02.jpg)
 
 #### 功能
 提供GPS定位、语音单呼，组呼，群组切换，电子围栏报警等
 
 ### 3、ZF记录仪
-![](image/hardware/zfy01.jpg)
-![](image/hardware/zfy02.jpg)
-![](image/hardware/zfy03.jpg)
+![](images/hardware/zfy01.jpg)
+![](images/hardware/zfy02.jpg)
+![](images/hardware/zfy03.jpg)
 
 提供全部功能等
 
 ### 4、嵌入式公网对讲机
 基于移远的EC600x, EC800x 等系列适配
-![](image/hardware/iot01.jpg)
-![](image/hardware/iot02.png)
+![](images/hardware/iot01.jpg)
+![](images/hardware/iot02.png)
 
 #### 功能
 提供GPS定位、语音单呼，组呼，群组切换，电子围栏报警等
@@ -150,7 +150,8 @@
 ## 八、联系方式
 
 邮箱  springyxlyxl@163.com
+
 微信
-![](image/wx.png)
+![](images/wx.png)
 
 
