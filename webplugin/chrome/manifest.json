@@ -1,0 +1,47 @@
+{
+    "manifest_version": 3,
+    "name" : "MyPOCSocketProxy",
+    "version" : "1.0.0",
+    "description" : "MyPOC Socket Proxy",
+
+    "background" : {    
+      "service_worker": "service_worker.js" 
+    }, 
+ 
+    "permissions" : [
+        "nativeMessaging",
+        "tabs",
+	"background",
+	"scripting"       
+    ],
+
+     "host_permissions": [
+       "https://example.com/*",
+       "http://localhost:8000/*"
+     ],    
+
+   "content_scripts": [
+    {
+      "matches": ["http://localhost:8000/*"], // Æ¥ÅäµÄÍøÕ¾
+      "js": ["content.js"]
+    }
+   ],
+
+    "externally_connectable": {
+       "matches": ["http://localhost/*"]
+    },
+
+    "web_accessible_resources": [
+    {
+      "resources": ["test.js"],
+      "matches": ["<all_urls>"]
+    }
+    ],
+
+    "icons":{
+       "16": "static/img/icon_poc.png",
+       "48": "static/img/icon_poc.png",
+       "128": "static/img/icon_poc.png"
+    }
+
+}

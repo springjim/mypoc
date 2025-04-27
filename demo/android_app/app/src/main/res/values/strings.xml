@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">MyPOCDemo</string>
+
+    <!--Mic State_call -->
+    <string name="mic_state_mic_susecc">抢麦成功</string>
+    <string name="mic_state_mic_fail">抢麦失败</string>
+    <string name="mic_state_mic_read">申请中 ..</string>
+    <string name="mic_state_mic_idle">麦空闲</string>
+    <string name="mic_state_mic_offline">已离线</string>
+    <string name="mic_state_outline">离线</string>
+    <string name="mic_state_mic_relase">麦已释放</string>
+    <string name="mic_state_online">在线</string>
+    <string name="mic_state_listening">正在讲话..</string>
+
+    <!--所有tab模块-->
+    <string name="mypoc_tab_talk">对讲</string>
+    <string name="mypoc_tab_group">群组</string>
+    <string name="mypoc_tab_contact">通讯录</string>
+    <string name="mypoc_tab_profile">我的</string>
+
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="exitComplete">退出</string>
+    <string name="exitMsg">确认要退出吗？</string>
+    <string name="exitTitle">提示</string>
+
+    <!--profile-fragment-->
+    <string name="system_account">系统参数</string>
+    <string name="system_exit">退出应用</string>
+    <string name="create_group">创建群组</string>
+
+    <string name="prompt_delete_groups">解散临时群组</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <!--Source: Activity title.
+        Description: Title for the Settings activity.-->
+    <string name="tts_settings_label">eSpeak 文字转语音 (TTS) 设置</string>
+    <!--Source: Preference title.
+          Description: Title for the preference that controls default voice pitch.-->
+    <string name="setting_default_pitch">默认声调</string>
+    <!--Source: Preference title.
+          Description: Title for the preference that controls default speech rate.-->
+    <string name="setting_default_rate">语速倍数</string>
+    <!--Source: Dialog text.
+          Description: Status message shown when installing voice data.-->
+    <string name="installing_voice_data">正在安装语音数据...</string>
+    <!--Source: Dialog message.
+          Description: Alert dialog prompting the user to set eSpeak as their default TTS engine.-->
+    <string name="set_default_message">未将 eSpeak 设置为文字转语音的默认引擎。</string>
+    <!--Source: Dialog message.
+          Description: Alert dialog telling the user that voice data installation failed.-->
+    <string name="voice_data_failed_message">eSpeak 无法安装语音数据。请检查您的 SD 卡。</string>
+    <!--Source: Dialog message.
+          Description: Alert dialog telling the user that an unknown error has occurred.-->
+    <string name="error_message">很抱歉，eSpeak 启动失败。</string>
+    <!--Source: Label text.
+          Description: Label informing the user of the current text-to-speech language.-->
+    <string name="current_tts_locale">默认语音</string>
+    <!--Source: Label text.
+          Description: Label informing the user of how many voices are installed.-->
+    <string name="available_voices">已安装的语音库数量</string>
+    <!--Source: Button label.
+          Description: Button for launching general text-to-speech settings.-->
+    <string name="tts_settings">文字转语音 (TTS) 常规设置</string>
+    <!--Source: Button label.
+          Description: Button for launching eSpeak-specific settings.-->
+    <string name="engine_settings">eSpeak 文字转语音 (TTS) 设置</string>
+    <!--Source: Label text.
+          Description: Label informing the user that eSpeak is loading resources.-->
+    <string name="loading">正在加载，请稍候...</string>
+    <!--Source: Spoken aloud.
+          Description: Sample text spoken aloud when the user is trying out a language.-->
+    <string name="sample_text">正在朗读的是%s的语音示例</string>
+
+
+</resources>

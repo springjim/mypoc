@@ -1,0 +1,17 @@
+{
+  "name": "electronplugin-demo",
+  "version": "1.0.0",
+  "description": "test mypoc talk",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "localApp": "node localApp.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "author": "zhoucl",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.3.3"
+  }
+}

@@ -1,0 +1,3 @@
+Windows Registry Editor Version 5.00
+[HKEY_CURRENT_USER\Software\Google\Chrome\NativeMessagingHosts\com.mypoc.myhost]
+@="D:\\POC\\\codeup\\browserplugin\\browserplugin\\hostapp\\ConsoleApp\\bin\\Debug\\com.mypoc.myhost-manifest.json"

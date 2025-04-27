@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:padding="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/item_background">
+
+        <!-- 左侧：头像 -->
+        <ImageView
+            android:id="@+id/userAvatarIV"
+            android:src="@mipmap/user_icon_offline"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <!-- 中间：用户名和ID -->
+        <LinearLayout
+            android:layout_marginStart="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/username"
+                    tools:text="用户名称"
+                    android:textColor="@color/mypoc_bottomtab_txtcolor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/userid"
+                tools:text="userid"
+                android:textSize="12sp"
+                android:textColor="@color/mypoc_bottomtab_txtcolor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- 用户状态：在线，离线, 在线在组 -->
+        <TextView
+            android:id="@+id/userStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/mypoc_bottomtab_txtcolor"
+            android:textSize="12sp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+</LinearLayout>

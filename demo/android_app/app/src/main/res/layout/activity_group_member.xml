@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mypoc_bg_color"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.GroupMemberActivity">
+
+    <!-- 顶部导航条 -->
+    <LinearLayout
+        android:id="@+id/ll_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mypoc_bg_color"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="4dp">
+
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←返回"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:minHeight="0dp"
+            android:paddingVertical="4dp"
+            />
+
+        <!-- 组名称（居中） -->
+        <TextView
+            android:id="@+id/tv_group_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:paddingVertical="4dp"
+            />
+
+        <!-- 右侧占位（保持对称） -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_group_oper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mypoc_fragment_bgcolor"
+        android:orientation="horizontal" >
+
+        <!-- 空 View 占位，将 Button 推到右侧 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- 靠右的 Button -->
+        <Button
+            android:id="@+id/deletegroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="解散组"
+            android:layout_gravity="end" />
+    </LinearLayout>
+
+    <!-- 组简介区域 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mypoc_fragment_bgcolor"
+        android:padding="16dp"
+        >
+
+        <!-- 组类型 -->
+        <TextView
+            android:id="@+id/labelGroupType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="组类型:"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_group_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/labelGroupType"/>
+
+        <!-- 成员数量 -->
+        <TextView
+            android:id="@+id/labelMemberCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成员数量:"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelGroupType"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_member_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/labelMemberCount"/>
+
+        <!-- 创建时间 -->
+        <TextView
+            android:id="@+id/labelCreateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建时间:"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelMemberCount"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/labelCreateTime"/>
+
+        <!-- 创建人 -->
+        <TextView
+            android:id="@+id/labelCreator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建人:"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelCreateTime"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_creator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/labelCreator"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 组成员列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_member_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mypoc_fragment_bgcolor"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/group_member_item" />
+
+</LinearLayout >

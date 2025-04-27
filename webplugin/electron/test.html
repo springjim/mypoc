@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Native Messaging Test</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div>
+    <button id="connectNativeApp">连接本地应用【必须先调用】</button>
+  </div>
+  <div>
+    <label for="userId">用户ID:</label>
+    <input type="text" id="userId" placeholder="请输入用户ID" value="100383">
+    <button id="sendMessageLoginPlatform">调度台登录信令</button>
+  </div>
+  <div>
+    <label for="groupId">工作组ID:</label>
+    <input type="text" id="groupId" placeholder="请输入工作组ID" value="80002402">
+    <button id="sendMessageWorkGroupId">上报工作组信令</button>
+  </div>
+  <div>
+    <button id="sendMessageApplyMic">下达抢麦信令</button>
+  </div>
+  <div>
+    <button id="sendMessageReleasMic">下达释放麦信令</button>
+  </div>
+  <div>
+    <button id="sendMessageLogout">调度台登出信令并且断开本地应用</button>
+  </div>
+</div>
+<p>来自本地应用的响应: <span id="response"></span></p>
+<script src="test.js"></script>
+</body>
+</html>
