@@ -1,7 +1,7 @@
-# MyPOC 一站式开箱即用的公网对讲和28181视频监控平台，适配Android公网对讲机（含大屏幕触屏、小屏幕按键机型）、安卓平板、嵌入式公网对讲机
+# MyPOC 一站式开箱即用的公网对讲和适配终端到GB28181视频监控平台，适配Android公网对讲机（含大屏幕触屏、小屏幕按键机型）、安卓平板、嵌入式公网对讲机
 
 ## 一、介绍
-一款轻量级的对讲平台，可用于公网、企业局域网，能基本满足大多数常用需求；
+一款轻量级的对讲平台，可用于公网、企业局域网，能基本满足大多数常用需求；在公安、消防、安保、物业、电梯、机场、物流、铁路、企业园区、智慧工地等行业有广泛应用
 终端poc app已适配GB28181, 可以注册到标准的国标视频监控平台;
 提供对讲平台与GB28181视频监控平台完整搭建
 
@@ -22,6 +22,17 @@
 3. 支持终端前摄、后摄、USB(OTG)摄像头的全部 H264或 H265上传PS流；
 4. 打包的PS流与海康、大华、宇视等厂家兼容，自动对VPS、PPS、SPS及 I、P、B等帧的封包处理。
 5. 支持AAC音频采集打包成 PS流上传到GB28181平台；
+
+### 2、二次开发与代码集成
+本平台提供了API与协议对接，同时提供绝大多数客户端源代码开放，所有的第三方开发者或企业可以在此基础上定制和二次开发
+
+| 客户端源代码      | 适配硬件终端                                | 源代码相对位置目录 | 集成和源代码说明 |
+|-------------|---------------------------------------|-----------|----------|
+| Android app | 兼容安卓手机、国内绝大多数厂商安卓公网对讲机或平板终端、单兵终端等            | demo\android_app         | [集成说明](https://gitee.com/zhousiraaa/mypoc/wikis/android%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%BA%90%E7%A0%81%E9%9B%86%E6%88%90%E8%AF%B4%E6%98%8E?sort_id=13973379)        |
+| iot嵌入式app   | 兼容移远模组EC600x/EC800x系列开发板              | demo\iot_app         | [集成说明](https://gitee.com/zhousiraaa/mypoc/wikis/iot%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%BA%90%E7%A0%81%E9%9B%86%E6%88%90%E8%AF%B4%E6%98%8E)        |
+| PC桌面端应用     | Windows10及11                          | pc_app         | 待补充...        |
+| Web平台应用     | 为Edge、Chrome浏览器提供插件方案，可以将对讲快速集成到web应用 | webplugin\chrome         | [集成说明](https://gitee.com/zhousiraaa/mypoc/wikis/%E6%B5%8F%E8%A7%88%E5%99%A8(Edge%E5%92%8CChrome)%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E5%AF%B9%E8%AE%B2%E8%AF%B4%E6%98%8E)        |
+| Electron应用  | 提供eclectron对讲插件,快速集成                  | webplugin\electron         | [集成说明](https://gitee.com/zhousiraaa/mypoc/wikis/Electron%20%E5%BA%94%E7%94%A8%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E5%AF%B9%E8%AE%B2%E8%AF%B4%E6%98%8E)        |
 
 ## 二、各端功能介绍
 ### 1、服务端
