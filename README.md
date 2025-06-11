@@ -5,6 +5,8 @@
 终端poc app已适配GB28181, 可以注册到标准的国标视频监控平台;
 提供对讲平台与GB28181视频监控平台完整搭建
 
+国内同步仓库(优先更新内容)，[请参考](https://gitee.com/zhousiraaa/mypoc)
+
 ### 1、软件架构
 
 ![](https://github.com/springjim/mypoc/blob/main/images/architecture.png)
