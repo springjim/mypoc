@@ -38,6 +38,7 @@
 
 ## 二、平台介绍教材
 [下载最新版教材说明](https://gitee.com/zhousiraaa/mypoc/blob/master/doc/MyPOC%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D-2025.10%E7%89%88.pdf)
+![](images/mypoc_intro.png)
 
 ## 三、各端功能介绍
 ### 1、服务端
