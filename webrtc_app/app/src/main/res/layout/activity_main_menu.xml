@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.keypad.MainMenuActivity"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@color/mypoc_bg_color"
+    android:fitsSystemWindows="true">
+
+    <!-- Menu Items Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/menuItem_switchgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/topmenu_sub_title1"
+                style="@style/myMaxtext_wrap"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusDown="@id/menuItem_groupmember"
+                android:background="@drawable/menu_background"
+                />
+
+            <TextView
+                android:id="@+id/menuItem_groupmember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/topmenu_sub_title2"
+                style="@style/myMaxtext_wrap"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusUp="@id/menuItem_switchgroup"
+                android:nextFocusDown="@id/menuItem_appconfig"
+                android:background="@drawable/menu_background"
+                />
+
+            <TextView
+                android:id="@+id/menuItem_appconfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/topmenu_sub_title3"
+                style="@style/myMaxtext_wrap"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusUp="@id/menuItem_groupmember"
+                android:nextFocusDown="@id/menuItem_sysconfig"
+                android:background="@drawable/menu_background"
+                />
+
+            <TextView
+                android:id="@+id/menuItem_sysconfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/topmenu_sub_title4"
+                style="@style/myMaxtext_wrap"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusUp="@id/menuItem_appconfig"
+                android:background="@drawable/menu_background"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <!-- Bottom Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/leftTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            style="@style/myMaxtext_wrap"
+            android:textColor="@color/myYellow"
+            android:textStyle="bold"
+            android:text="@string/nav_confirm"
+            android:layout_marginStart="5dp"
+            />
+
+        <TextView
+            android:id="@+id/rightTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            style="@style/myMaxtext_wrap"
+            android:textColor="@color/myYellow"
+            android:textStyle="bold"
+            android:text="@string/nav_cancel"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

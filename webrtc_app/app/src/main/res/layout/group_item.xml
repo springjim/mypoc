@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="7dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/item_background"
+    >
+
+    <!-- 左侧部分：群组图标、名称、状态图标 -->
+    <ImageView
+        android:id="@+id/iv_group_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/head_grpfix"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/iv_group_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_group_icon"
+        app:layout_constraintBottom_toBottomOf="@id/iv_group_icon"/>
+
+    <ImageView
+        android:id="@+id/iv_current_group"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="6dp"
+        android:visibility="visible"
+        android:src="@mipmap/working_group"
+        app:layout_constraintStart_toEndOf="@id/tv_group_name"
+        app:layout_constraintTop_toTopOf="@id/tv_group_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_group_name"/>
+
+    <!-- 右侧部分：两个按钮 -->
+    <Button
+        android:id="@+id/btn_enter_group"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="进入组"
+        android:textSize="12sp"
+        android:background="@color/teal_700"
+        app:layout_constraintEnd_toStartOf="@id/btn_view_members"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_view_members"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="组详情"
+        android:textSize="12sp"
+        android:background="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

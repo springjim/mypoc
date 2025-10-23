@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mypoc_bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.keypad.UserConfigActivity">
+
+    <!-- Menu Items Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <!--帐号行-->
+            <LinearLayout
+                android:id="@+id/ll_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusDown="@id/ll_username"
+                android:background="@drawable/menu_background"
+                >
+                <!-- 标题（靠左） -->
+                <TextView
+                    android:id="@+id/account_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="登录帐号"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <!-- 占位空间，让内容项靠右 -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <!-- 内容项（靠右）可以是 TextView 或 Switch -->
+                <TextView
+                    android:id="@+id/account_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_default"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"/>
+
+
+            </LinearLayout>
+
+            <!--用户名称行-->
+            <LinearLayout
+                android:id="@+id/ll_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusUp="@id/ll_account"
+                android:nextFocusDown="@id/ll_ttsplay"
+                android:background="@drawable/menu_background"
+                >
+                <!-- 标题（靠左） -->
+                <TextView
+                    android:id="@+id/username_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="用户名称"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <!-- 占位空间，让内容项靠右 -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <!-- 内容项（靠右）可以是 TextView 或 Switch -->
+                <TextView
+                    android:id="@+id/username_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_default"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <!--tts语音播报行-->
+            <LinearLayout
+                android:id="@+id/ll_ttsplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusUp="@id/ll_username"
+                android:background="@drawable/menu_background"
+                >
+                <!-- 标题（靠左） -->
+                <TextView
+                    android:id="@+id/ttsplay_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="语音播报"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <!-- 占位空间，让内容项靠右 -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+
+                <!-- 或者用 Switch -->
+
+                <Switch
+                    android:id="@+id/ttsplay_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <!--定位行-->
+            <LinearLayout
+                android:id="@+id/ll_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusUp="@id/ll_ttsplay"
+                android:nextFocusDown="@id/ll_singlecall"
+                android:background="@drawable/menu_background"
+                >
+                <!-- 标题（靠左） -->
+                <TextView
+                    android:id="@+id/location_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="定位上报"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <!-- 占位空间，让内容项靠右 -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+
+                <!-- 或者用 Switch -->
+
+                <Switch
+                    android:id="@+id/location_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <!--单呼权限行-->
+            <LinearLayout
+                android:id="@+id/ll_singlecall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusUp="@id/ll_location"
+                android:nextFocusDown="@id/ll_versionName"
+                android:background="@drawable/menu_background"
+                >
+                <!-- 标题（靠左） -->
+                <TextView
+                    android:id="@+id/singlecall_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="单呼权限"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <!-- 占位空间，让内容项靠右 -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+
+                <!-- 或者用 Switch -->
+
+                <Switch
+                    android:id="@+id/singlecall_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <!--版本行-->
+            <LinearLayout
+                android:id="@+id/ll_versionName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusUp="@id/ll_singlecall"
+                android:background="@drawable/menu_background"
+                >
+                <!-- 标题（靠左） -->
+                <TextView
+                    android:id="@+id/versionName_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="App版本"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <!-- 占位空间，让内容项靠右 -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+
+                <!-- 或者用 Switch -->
+
+                <TextView
+                    android:id="@+id/versionName_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_default"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/nav_ok_cancel"
+        layout="@layout/title_nav_ok_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+          />
+
+</LinearLayout>

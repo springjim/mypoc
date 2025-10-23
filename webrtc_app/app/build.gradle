@@ -1,0 +1,128 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33
+
+    signingConfigs {
+        config {
+            storeFile file('D:\\POC\\codeup\\front\\app-keystore/mypocdemo.keystore')
+            keyAlias 'mypocdemo-alias'
+            keyPassword 'weiding761110'
+            storePassword 'weiding761110'
+        }
+        debug {
+            storeFile file('D:\\POC\\codeup\\front\\app-keystore/mypocdemo.keystore')
+            v2SigningEnabled false
+            keyAlias 'mypocdemo-alias'
+            keyPassword 'weiding761110'
+            storePassword 'weiding761110'
+        }
+        release {
+            storeFile file('D:\\POC\\codeup\\front\\app-keystore/mypocdemo.keystore')
+            v2SigningEnabled false
+            keyAlias 'mypocdemo-alias'
+            keyPassword 'weiding761110'
+            storePassword 'weiding761110'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.mypoc.ptt"
+        minSdk 24
+        targetSdk 26
+        versionCode 1000
+        versionName "1.0.0"
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_11
+            targetCompatibility JavaVersion.VERSION_11
+        }
+        ndk {
+            //设置支持的SO库架构  "x86"
+            //moduleName "app"
+            // armeabi-v7a 是32位arm架构
+            // arm64-v8a 是64位arm架构
+            abiFilters  "armeabi-v7a", "arm64-v8a"
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main
+                {
+                    jni.srcDirs = []  //disable automatic ndk-build
+                    jniLibs.srcDirs = ['src/main/jniLibs','libs']
+                }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+
+    // butterknife
+    implementation('com.jakewharton:butterknife:10.2.3') { exclude module: 'support-compat' }
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    // RxJava 2
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+
+    // RxAndroid（提供Android主线程调度器）
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    //事件总线
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //百度定位
+    // 基础地图 SDK（包含 SDKInitializer）
+    implementation 'com.baidu.lbsyun:BaiduMapSDK_Map:7.6.4'
+    // 定位 SDK
+    implementation 'com.baidu.lbsyun:BaiduMapSDK_Location:9.6.4'
+
+    implementation project(path: ':pttlibrary')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // json
+    implementation 'com.alibaba:fastjson:1.2.83'
+    // alerter
+    implementation 'com.github.tapadoo:alerter:7.0.0'
+    // websocket
+    implementation 'org.java-websocket:Java-WebSocket:1.4.0'
+
+    ////其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如4.0.3
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+
+    //第三方开源推流库
+    implementation 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtplibrary:2.2.4'
+    implementation 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:encoder:2.2.4'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.0'
+
+    //ijkplayer 用于播放rtsp流
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'   // ARMv7a
+    implementation 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.8'    //armv8a, 即最新终端用了64位
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.8'   // ARMv5  , 由于库比较大,一般手机armv5已较少
+    //implementation 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.8'     // x86, 由于库比较大,一般手机x86已较少
+    //implementation 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.8'  // x86_64, 由于库比较大,一般手机x86_64已较少
+    // --webrtc 库--
+    implementation project(path: ':rtc-chat')
+    implementation project(path: ':base')
+
+
+}

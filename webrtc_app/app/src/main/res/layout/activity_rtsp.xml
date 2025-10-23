@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/mypoc_bg_color">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/mypoc_bg_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="RTSP推流 - 自适应码率+水印"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- 视频预览区域 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000000">
+
+        <com.pedro.rtplibrary.view.OpenGlView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:AAEnabled="false"
+            app:aspectRatioMode="adjust"
+            app:isFlipHorizontal="false"
+            app:isFlipVertical="false"
+            app:keepAspectRatio="true"
+            app:numFilters="2" />
+
+        <!-- 状态指示器 -->
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#80000000"
+            android:padding="8dp"
+            android:text="未连接"
+            android:textColor="#ff6b6b"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!-- 控制面板 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 推流控制按钮 -->
+        <Button
+            android:id="@+id/b_start_stop"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/button_stream_selector"
+            android:text="开始推流"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- 参数显示区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- 当前码率显示 -->
+            <TextView
+                android:id="@+id/tv_bitrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#e0e0e0"
+                android:padding="8dp"
+                android:text="码率: 0 kbps"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+
+            <!-- 当前分辨率显示 -->
+            <TextView
+                android:id="@+id/tv_resolution"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#e0e0e0"
+                android:padding="8dp"
+                android:text="分辨率: 0x0"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- 网络质量指示器 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="网络质量:"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+            <ProgressBar
+                android:id="@+id/pb_network"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/network_progress" />
+
+            <TextView
+                android:id="@+id/tv_network_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="检测中..."
+                android:textColor="#666666"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <!-- 服务器设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <EditText
+                android:id="@+id/et_server_url"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="RTSP服务器地址"
+                android:padding="8dp"
+                android:text=""
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_switch_camera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="切换摄像头"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mypoc_fragment_bgcolor"
+    tools:context=".fragment.ProfileFragment"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:id="@+id/fun_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+
+            android:orientation="horizontal"
+            android:useDefaultMargins="false"
+            android:alignmentMode= "alignMargins"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="6dp"
+            android:background="@color/transparent"
+            >
+
+            <!--系统参数，如帐号-->
+            <RelativeLayout
+                android:id="@+id/re_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_setting"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="false"
+                    android:src="@mipmap/configmodify" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_setting"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/system_account"
+                    android:textColor="@color/mypoc_bottomtab_txtcolor"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <!--退出对讲应用-->
+            <RelativeLayout
+                android:id="@+id/re_exitapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_exitapp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="false"
+                    android:src="@mipmap/exitapp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_exitapp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/system_exit"
+                    android:textColor="@color/mypoc_bottomtab_txtcolor"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <!--创建群组-->
+            <RelativeLayout
+                android:id="@+id/re_creategroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_creategroup"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="false"
+                    android:src="@mipmap/creategroup" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_creategroup"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/create_group"
+                    android:textColor="@color/mypoc_bottomtab_txtcolor"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <!--创建视频会议-->
+            <RelativeLayout
+                android:id="@+id/re_createmeet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_createmeet"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="false"
+                    android:src="@mipmap/createmeeting" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_createmeet"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/create_meeting"
+                    android:textColor="@color/mypoc_bottomtab_txtcolor"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <!--直播推流-->
+            <RelativeLayout
+                android:id="@+id/re_rtsp_push"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_rtsp_push"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="false"
+                    android:src="@mipmap/livestream" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_rtsp_push"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/rtsp_push"
+                    android:textColor="@color/mypoc_bottomtab_txtcolor"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <!--SOS呼叫-->
+            <RelativeLayout
+                android:id="@+id/re_sos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_sos"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="false"
+                    android:src="@mipmap/sos" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_sos"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/sos_call"
+                    android:textColor="@color/mypoc_bottomtab_txtcolor"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <!--后台推流-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/re_rtsp_push_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_rtsp_push_back"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="false"
+                    android:src="@mipmap/configmodify" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_rtsp_push_back"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/rtsp_push_back"
+                    android:textColor="@color/mypoc_bottomtab_txtcolor"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </GridLayout>
+
+    </ScrollView>
+
+</LinearLayout>

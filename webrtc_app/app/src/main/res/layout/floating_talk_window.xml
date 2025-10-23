@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/floating_bg"
+    android:padding="2dp"
+    android:clickable="true"
+    android:focusable="true"
+     >
+
+    <TextView
+        android:id="@+id/talk_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="无组"
+        android:textColor="@color/purple_700"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/talk_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="麦空闲"
+        android:textColor="@color/mypoc_bg_color"
+        android:textSize="14sp" />
+
+</LinearLayout >

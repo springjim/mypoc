@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mypoc_bg_color"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.RtcTalkActivity">
+
+    <!-- 顶部导航条 -->
+    <LinearLayout
+        android:id="@+id/ll_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mypoc_bg_color"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="4dp">
+
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←返回"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:minHeight="0dp"
+            android:paddingVertical="4dp"
+            />
+
+        <!-- 组名称（居中） -->
+        <TextView
+            android:id="@+id/tv_contact_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:paddingVertical="4dp"
+            />
+
+        <!-- 右侧占位（保持对称） -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mypoc_fragment_bgcolor"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        >
+
+        <!-- 顶部居中文本 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="基于WebRTC的一对一音视频通话"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+
+        <TextView
+            android:id="@+id/tv_call_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 两个水平居中的按钮 -->
+        <Button
+            android:id="@+id/talk_audio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:textSize="14sp"
+            android:text="音频通话"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/talk_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:textSize="14sp"
+            android:text="视频通话" />
+
+    </LinearLayout>
+</LinearLayout>

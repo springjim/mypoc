@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mypoc_bg_color"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.IncomeTwoWayGroupTalkActivity">
+    <!-- 顶部导航条 -->
+    <LinearLayout
+        android:id="@+id/ll_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mypoc_bg_color"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="4dp">
+
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←退出"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:minHeight="0dp"
+            android:paddingVertical="4dp"
+            />
+
+        <!-- 组名称（居中） -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="双向通话"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:paddingVertical="4dp"
+            />
+
+        <!-- 右侧占位（保持对称） -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/voice_twowaytalk_bg"
+        android:background="@color/mypoc_bottomtab_bgcolor"
+        >
+
+    </ImageView>
+
+    <!--后期加入麦克风、喇叭控制-->
+
+    <LinearLayout
+        android:background="@color/mypoc_bottomtab_bgcolor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="通话成员"
+            android:background="@color/purple_200"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="3dp"
+            >
+
+        </TextView>
+
+        <!-- 组成员列表 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_weight="1"
+            android:id="@+id/rv_member_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/mypoc_fragment_bgcolor"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/group_member_item" />
+
+    </LinearLayout>
+
+</LinearLayout>

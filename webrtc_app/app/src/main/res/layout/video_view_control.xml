@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    android:rowCount="1"
+    android:orientation="horizontal"
+
+    android:background="@color/floating_transparent"
+    >
+
+     <ImageView
+         android:id="@+id/iv_refresh"
+         android:layout_width="36dp"
+         android:layout_height="36dp"
+         android:scaleType="fitCenter"
+         android:src="@mipmap/stream_refresh"
+         android:padding="6dp"
+         >
+
+     </ImageView>
+
+    <ImageView
+        android:id="@+id/iv_snap"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/stream_snap"
+        android:padding="6dp"
+        >
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/iv_record"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/stream_record"
+        android:padding="6dp"
+        >
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/stream_close"
+        android:padding="6dp"
+        >
+
+    </ImageView>
+
+
+</GridLayout >

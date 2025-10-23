@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mypoc_bg_color"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.SosCallActivity">
+
+    <!-- 顶部导航条 -->
+    <LinearLayout
+        android:id="@+id/ll_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mypoc_bg_color"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="4dp">
+
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←返回"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:minHeight="0dp"
+            android:paddingVertical="4dp"
+            />
+
+        <!-- 组名称（居中） -->
+        <TextView
+            android:id="@+id/tv_group_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:paddingVertical="4dp"
+            />
+
+        <!-- 右侧占位（保持对称） -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <!-- 多行文本显示 -->
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1、这里是模拟SOS呼叫，长按SOS呼叫，长按放开结束SOS呼叫 \n 2、SOS呼叫会发送定位和音视频推到调度台 \n 3、对讲机上SOS实体键适配后效果同样"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:maxLines="10"
+            android:ellipsize="end"
+            android:padding="8dp" />
+
+        <!-- 图片显示区域，填充剩余空间 -->
+        <ImageView
+            android:id="@+id/talk_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType =  "centerInside"
+            android:src="@mipmap/btn_talk_idle"
+            android:layout_gravity="center"
+
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

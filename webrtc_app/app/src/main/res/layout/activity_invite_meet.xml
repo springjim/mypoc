@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mypoc_bg_color"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".webrtc.InviteMeetActivity">
+
+
+    <!-- 顶部导航条 -->
+    <LinearLayout
+        android:id="@+id/ll_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mypoc_bg_color"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="4dp">
+
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←返回"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:minHeight="0dp"
+            android:paddingVertical="4dp"
+            />
+
+        <!-- 组名称（居中） -->
+        <TextView
+            android:id="@+id/tv_room_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:paddingVertical="4dp"
+            />
+
+        <!-- 右侧占位（保持对称） -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <!--组名称与确认创建-->
+    <LinearLayout
+        android:id="@+id/ll_group_oper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mypoc_fragment_bgcolor"
+        android:gravity="center_vertical"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <!-- 空 View 占位，将 Button 推到右侧 -->
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_meet_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:hint="请房间编号"
+                android:inputType="text"
+                android:textSize="15sp"
+                android:text=""
+                android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <!-- 靠右的 Button -->
+        <Button
+            android:id="@+id/btn_create_meet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建会议"
+
+            />
+    </LinearLayout>
+
+    <!-- 通讯录列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mypoc_fragment_bgcolor"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/contact_item_select" />
+
+</LinearLayout>
