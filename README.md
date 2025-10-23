@@ -37,7 +37,9 @@
 | Electron应用  | 提供eclectron对讲插件,快速集成                  | webplugin\electron         | [集成说明](https://gitee.com/zhousiraaa/mypoc/wikis/Electron%20%E5%BA%94%E7%94%A8%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E5%AF%B9%E8%AE%B2%E8%AF%B4%E6%98%8E)        |
 
 ## 二、平台介绍教材
-[下载最新版教材说明](https://gitee.com/zhousiraaa/mypoc/blob/master/doc/MyPOC%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D-2025.10%E7%89%88.pdf)
+- [下载最新版部署说明](https://gitee.com/zhousiraaa/mypoc/blob/master/doc/MyPOC%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2%E6%89%8B%E5%86%8C-2025.10%E7%89%88.pdf)
+- [下载最新版教材说明](https://gitee.com/zhousiraaa/mypoc/blob/master/doc/MyPOC%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D-2025.10%E7%89%88.pdf)
+
 ![](image/mypoc_intro.png)
 
 ## 三、各端功能介绍
