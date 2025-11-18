@@ -9,7 +9,7 @@
 
 ### 1、软件架构
 
-![](https://github.com/springjim/mypoc/blob/main/images/architecture.png)
+![](https://github.com/springjim/mypoc/blob/main/image/architecture.png)
 
 平台是典型云服务器+微服务+C/S+B/S的架构，平台采用多租户模型，可以布署于公网，也可以灵活布署于局域网运行。
 
@@ -64,12 +64,12 @@
 * 遥毙、激活；
 * 电子围栏与告警
 * 视频监控与录像
-* 音视频通话 （基于Agora 声网C# SDK ，需要开发者到声网申请帐号）
+* 音视频通话
 * 音视频会议
 * PC屏幕分享
 * 集群广播
 ### 3、安卓端
-![](images/android_overview.png)
+![](image/android_overview.png)
 因为对讲采用实时采集麦克风，所以要解决业界的回音啸叫、自动增益、降噪、静音检测等问题，本端主要参考了 [Android-Audio-Processing-Using-WebRTC](https://github.com/mail2chromium/Android-Audio-Processing-Using-WebRTC)，
 > 在如下方面进行语音的3A处理
 * Acoustic Echo Cancellation (AEC)
@@ -83,7 +83,7 @@
 * 对讲组切换
 * NFC巡更签到
 * 二维码巡更签到
-* 直播图传（基于Agora 声网Android SDK ，需要开发者到声网申请帐号）
+* 直播图传
 * 音视频通话
 * 水印打卡
 * 定位上报
@@ -91,7 +91,7 @@
 * 支持OTG USB2/USB3 外接UVC直播图传
 
 ### 4、Web端
-![](images/web_manager.png)
+![](image/web_manager.png)
 采用Vue2框架开发，主要功能有：
 * 系统管理（角色、权限与人员分配）
 * 巡更管理
@@ -103,16 +103,16 @@
 
 第一步：app中注册28181平台
 
-![](images/android28181reg.png)
+![](image/android28181reg.png)
 
 
 第二步：在国标视频监控平台实时点播
 
-![](images/platform28181.png)
+![](image/platform28181.png)
 
 目前终端已支持：前摄像头、后摄像头、UVC(USB OTG)摄像头接入28181
 
-![](images/android_gb28181.jpg)
+![](image/android_gb28181.jpg)
 
 ## 四、服务端接口说明
 
@@ -125,23 +125,23 @@
 提供PTT按键、SOS按键及其它定义键的键值或广播值，几乎全部能适配
 
 ### 2、公网对讲机（按键机型）
-![](images/hardware/binqi01.jpg)
-![](images/hardware/binqi02.jpg)
+![](image/hardware/binqi01.jpg)
+![](image/hardware/binqi02.jpg)
 
 #### 功能
 提供GPS定位、语音单呼，组呼，群组切换，电子围栏报警等
 
 ### 3、ZF记录仪
-![](images/hardware/zfy01.jpg)
-![](images/hardware/zfy02.jpg)
-![](images/hardware/zfy03.jpg)
+![](image/hardware/zfy01.jpg)
+![](image/hardware/zfy02.jpg)
+![](image/hardware/zfy03.jpg)
 
 提供全部功能等
 
 ### 4、嵌入式公网对讲机
 基于移远的EC600x, EC800x 等系列适配
-![](images/hardware/iot01.jpg)
-![](images/hardware/iot02.png)
+![](image/hardware/iot01.jpg)
+![](image/hardware/iot02.png)
 
 #### 功能
 提供GPS定位、语音单呼，组呼，群组切换，电子围栏报警等
@@ -171,6 +171,6 @@ springyxlyxl@163.com
 
 微信
 
-![](images/wx.png)
+![](image/wx.png)
 
 
