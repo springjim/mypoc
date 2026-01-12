@@ -1,4 +1,4 @@
-# MyPOC 一站式开箱即用的公网对讲和适配终端到GB28181视频监控平台，适配Android公网对讲机（含大屏幕触屏、小屏幕按键机型）、安卓平板、嵌入式公网对讲机
+# MyPOC 一站式开箱即用的公网对讲和适配终端到GB28181视频监控平台，适配Android公网对讲机（含大屏幕触屏、小屏幕按键机型）、安卓平板、嵌入式公网对讲机，全面支持信创产业要求
 
 ## 一、介绍
 一款轻量级的对讲平台，可用于公网、企业局域网，能基本满足大多数常用需求；在公安、消防、安保、物业、电梯、机场、物流、铁路、企业园区、智慧工地等行业有广泛应用
@@ -49,13 +49,26 @@
 | Web平台应用     | 为Edge、Chrome浏览器提供插件方案，可以将对讲快速集成到web应用 | webplugin\chrome         | [集成说明](https://gitee.com/zhousiraaa/mypoc/wikis/%E6%B5%8F%E8%A7%88%E5%99%A8(Edge%E5%92%8CChrome)%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E5%AF%B9%E8%AE%B2%E8%AF%B4%E6%98%8E)        |
 | Electron应用  | 提供eclectron对讲插件,快速集成                  | webplugin\electron         | [集成说明](https://gitee.com/zhousiraaa/mypoc/wikis/Electron%20%E5%BA%94%E7%94%A8%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E5%AF%B9%E8%AE%B2%E8%AF%B4%E6%98%8E)        |
 
-## 二、平台介绍教材
+## 二、信创产业适配
+
+### 1、服务端操作系统支持统信，中标麒麟，银河麒麟，欧拉
+### 2、数据库支持人大金仓
+### 3、Web版调度台 
+  浏览器支持：360安全浏览器、微软Edge、Google Chrome浏览器，全部原生支持无需插件安装
+  web版主要模块有：群组对讲、定位轨迹、电子围栏、离线地图、视频/语音通话、视频图传与分享、视频会议及录音录像等等
+  ![输入图片说明](image/xinchuang/xc-login.png)
+  ![输入图片说明](image/xinchuang/xc-offlinemap.png)
+  ![输入图片说明](image/xinchuang/xc-stream.png)
+  ![输入图片说明](image/xinchuang/xc-meeting.png)
+  ![输入图片说明](image/xinchuang/xc-record.png)
+
+## 三、平台介绍教材
 - [下载最新版部署说明](https://gitee.com/zhousiraaa/mypoc/blob/master/doc/MyPOC%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2%E6%89%8B%E5%86%8C-2025.10%E7%89%88.pdf)
 - [下载最新版教材说明](https://gitee.com/zhousiraaa/mypoc/blob/master/doc/MyPOC%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D-2025.10%E7%89%88.pdf)
 
 ![](image/mypoc_intro.png)
 
-## 三、各端功能介绍
+## 四、各端功能介绍
 ### 1、服务端
 服务端技术栈有：JDK8.0+、Mina框架 (TCP Socket)、SpringBoot、SpringCloud、MybatisPlus等, 服务端业务主要分两大部分： 
 1. 实时数据/信令包，采用TCP Socket协议，主要是自定义信令包（心跳、抢麦、释放麦、上下线状态、系统状态、音视频邀请等）、媒体包（如语音编码包）等，基于Mina框架进行二进制编解码、可以满足高并发的要求。
@@ -127,12 +140,12 @@
 
 ![](image/android_gb28181.jpg)
 
-## 四、服务端接口说明
+## 五、服务端接口说明
 
 ### 1、[MyPOC-RestAPI说明](doc/MyPOC-RestAPI.pdf)
 ### 2、[MyPOC-Socket说明](doc/MyPOC-Socket.pdf)
 
-## 五、硬件适配系列
+## 六、硬件适配系列
 
 ### 1、三防公网对讲机（触摸屏）
 提供PTT按键、SOS按键及其它定义键的键值或广播值，几乎全部能适配
@@ -159,7 +172,7 @@
 #### 功能
 提供GPS定位、语音单呼，组呼，群组切换，电子围栏报警等
 
-## 六、演示链接
+## 七、演示链接
 
 [PC端应用下载](https://saas-park.oss-cn-shenzhen.aliyuncs.com/app/release/POCPlatformApp_Setup.exe)
 
@@ -167,17 +180,17 @@
 
 测试帐号获取，请发邮件联系，参考联系方式
 
-## 七、国内仓库同步（最新）
+## 八、国内仓库同步（最新）
 
 https://gitee.com/zhousiraaa/mypoc  
 
-## 八、合作说明
+## 九、合作说明
 
 1. 公网帐号和环境可免费申请和测试
 2. 服务端代码或接口二次开发的对接会收取点费用，视具体工作量而定
 3. 如果需要整个平台源代码，请用以下联系方式与我私聊
 
-## 九、联系方式
+## 十、联系方式
 
 邮箱  
 springyxlyxl@163.com
