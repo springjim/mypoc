@@ -54,6 +54,9 @@
 ### 1、服务端操作系统支持统信，中标麒麟，银河麒麟，欧拉
 ### 2、数据库支持人大金仓
 ### 3、Web版调度台 
+
+- [下载Web调度台教材](https://gitee.com/zhousiraaa/mypoc/blob/master/doc/Web%E8%B0%83%E5%BA%A6%E5%8F%B0%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf)
+
   浏览器支持：360安全浏览器、微软Edge、Google Chrome浏览器，全部原生支持无需插件安装
   web版主要模块有：群组对讲、定位轨迹、电子围栏、离线地图、视频/语音通话、视频图传与分享、视频会议及录音录像等等
   ![输入图片说明](image/xinchuang/xc-login.png)
