@@ -13,10 +13,42 @@
 
 平台是典型云服务器+微服务+C/S+B/S的架构，平台采用多租户模型，可以布署于公网，也可以灵活布署于局域网运行。
 
-#### 1.1对讲平台
-包含语音对讲、定位轨迹、电子围栏及音视频调度
+#### 1.1 对讲平台（自主的对讲云服务，非Sip协议对讲）
+  包含语音对讲、定位轨迹、电子围栏及音视频调度，基于自主的对讲云服务
 
-#### 1.2视频监控平台
+
+#### 1.2 SIP国标对讲平台（Sip协议对讲）
+SIP国标对讲，采用RFC 3261国际标准，以及国内标准系列，如公安部发布的ePDT融合协议(pSIP)等，应广大企业和开发者的强烈需求，该平台即将发布
+
+##### 1.2.1 SIP 协议介绍
+全称: Session Initiation Protocol，它是当前全球互联网和通信行业中的核心规范，由互联网工程任务组（IETF）在 2002 年 6 月发布 RFC 3261技术规范，与RFC 3261相关补允标准有（仅列举常用的）
+- RFC 3265：SIP Specific Event Notification（定义了SUBSCRIBE/NOTIFY）
+- RFC 3856：Presence事件包（定义了presence事件）
+- RFC 3903：PUBLISH方法（发布事件状态）
+- RFC 3428： 定义了 MESSAGE 方法，用于在 SIP 会话外直接发送类似 SMS 的即时消息
+- 等等...
+
+- [下载SIP 协议]https://gitee.com/zhousiraaa/mypoc/blob/master/doc/SIP-rfc3261-cn-james-zhu-v1.pdf
+
+##### 1.2.2 基于SIP的国内相关国标
+在国内主要应用于视频监控GB/T28181和宽窄带融合通讯标准，在网络摄像头、PDT警用对讲讲、执Fa记录仪等行业有广泛应用
+
+【GB28181相关标准】下载
+
+- [下载GB/T 28181-2016 ]https://gitee.com/zhousiraaa/mypoc/blob/master/doc/GBT%2028181-2016%20%E5%85%AC%E5%85%B1%E5%AE%89%E5%85%A8%E8%A7%86%E9%A2%91%E7%9B%91%E6%8E%A7%E8%81%94%E7%BD%91%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E4%BC%A0%E8%BE%93%E3%80%81%E4%BA%A4%E6%8D%A2%E3%80%81%E6%8E%A7%E5%88%B6%E6%8A%80%E6%9C%AF%E8%A6%81%E6%B1%82.pdf
+- [下载GB∕T 28181-2022  ]https://gitee.com/zhousiraaa/mypoc/blob/master/doc/GB%E2%88%95T%2028181-2022%20%E5%85%AC%E5%85%B1%E5%AE%89%E5%85%A8%E8%A7%86%E9%A2%91%E7%9B%91%E6%8E%A7%E8%81%94%E7%BD%91%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E4%BC%A0%E8%BE%93%E3%80%81%E4%BA%A4%E6%8D%A2%E3%80%81%E6%8E%A7%E5%88%B6%E6%8A%80%E6%9C%AF%E8%A6%81%E6%B1%82.pdf
+
+【Sip融合通讯相关标准（国标pSip,即 PDT Session Initiation Protocol）】下载
+
+- [下载应急专用数字集群ePDT通信系统技术-公网对讲规范]https://gitee.com/zhousiraaa/mypoc/blob/master/doc/%E5%BA%94%E6%80%A5%E4%B8%93%E7%94%A8%E6%95%B0%E5%AD%97%E9%9B%86%E7%BE%A4ePDT%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%8A%80%E6%9C%AF-%E5%85%AC%E7%BD%91%E5%AF%B9%E8%AE%B2%E8%A7%84%E8%8C%83.pdf
+- [下载YDT 1648-2007 基于数字蜂窝移动通信网的即按即说业务(PoC)服务器技术要求]https://gitee.com/zhousiraaa/mypoc/blob/master/doc/YDT%201648-2007%20%E5%9F%BA%E4%BA%8E%E6%95%B0%E5%AD%97%E8%9C%82%E7%AA%9D%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E7%BD%91%E7%9A%84%E5%8D%B3%E6%8C%89%E5%8D%B3%E8%AF%B4%E4%B8%9A%E5%8A%A1(PoC)%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF%E8%A6%81%E6%B1%82.pdf
+- [下载GA-T-1364-2017警用数字集群PDT通信系统互联技术规范]https://gitee.com/zhousiraaa/mypoc/blob/master/doc/GA-T-1364-2017%E8%AD%A6%E7%94%A8%E6%95%B0%E5%AD%97%E9%9B%86%E7%BE%A4PDT%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E4%BA%92%E8%81%94%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83pdf.pdf
+- [下载福建省技术规范]https://gitee.com/zhousiraaa/mypoc/blob/master/doc/DB35%E2%88%95T%201846-2019%20%E7%AA%84%E5%B8%A6%E4%B8%93%E4%B8%9A%E6%95%B0%E5%AD%97%E9%9B%86%E7%BE%A4%EF%BC%88PDT%EF%BC%89%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83.pdf
+
+大家先了解协议标准和规范，请下载和收藏，同时要注意这些标准的更新
+
+
+#### 1.3视频监控平台
 集成了强大的开源流媒体服务[ZLMediaKit](https://github.com/ZLMediaKit/ZLMediaKit)和 SIP服务 [Wvp-GB28181-pro](https://github.com/648540858/wvp-GB28181-pro/tree/master)框架，并在此基础上扩展了公网对讲终端的GB28181协议接入，实现注册、注销、终端音视频实时点播、录像、下载等功能。
 
 1. 目前支持android或单兵终端的H264编码，打包成 PS流上传到GB28181平台；
@@ -25,7 +57,7 @@
 4. 打包的PS流与海康、大华、宇视等厂家兼容，自动对VPS、PPS、SPS及 I、P、B等帧的封包处理。
 5. 支持AAC音频采集打包成 PS流上传到GB28181平台；
 
-#### 1.3视频会议平台(集成webrtc sfu)
+#### 1.4视频会议平台(集成webrtc sfu)
 -  提供端到端加密(e2ee)实现音视频传输  
 -  提供企业内部代替“腾讯会议”的方案  
 -  支持会议中调度台分享、APP分享桌面  
