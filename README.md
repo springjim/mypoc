@@ -26,6 +26,8 @@ SIP国标对讲，采用RFC 3261国际标准，以及国内标准系列，如公
 - RFC 3856：Presence事件包（定义了presence事件）
 - RFC 3903：PUBLISH方法（发布事件状态）
 - RFC 3428： 定义了 MESSAGE 方法，用于在 SIP 会话外直接发送类似 SMS 的即时消息
+- RFC 4566： 定义了SDP协议，用于音视频沟通
+- RFC 7118： 定义了如何将 SIP 协议封装在 WebSocket 协议中进行传输。主要解决了在 Web 浏览器环境中实现 SIP 通信的问题，使得 Web 应用可以通过 JavaScript 使用 SIP 进行音视频通话和即时消息
 - 等等...
 
 - [下载SIP 协议]https://gitee.com/zhousiraaa/mypoc/blob/master/doc/SIP-rfc3261-cn-james-zhu-v1.pdf
@@ -45,7 +47,16 @@ SIP国标对讲，采用RFC 3261国际标准，以及国内标准系列，如公
 - [下载GA-T-1364-2017警用数字集群PDT通信系统互联技术规范]https://gitee.com/zhousiraaa/mypoc/blob/master/doc/GA-T-1364-2017%E8%AD%A6%E7%94%A8%E6%95%B0%E5%AD%97%E9%9B%86%E7%BE%A4PDT%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E4%BA%92%E8%81%94%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83pdf.pdf
 - [下载福建省技术规范]https://gitee.com/zhousiraaa/mypoc/blob/master/doc/DB35%E2%88%95T%201846-2019%20%E7%AA%84%E5%B8%A6%E4%B8%93%E4%B8%9A%E6%95%B0%E5%AD%97%E9%9B%86%E7%BE%A4%EF%BC%88PDT%EF%BC%89%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83.pdf
 
-大家先了解协议标准和规范，请下载和收藏，同时要注意这些标准的更新
+大家先了解协议标准和规范，请下载和收藏，同时要注意这些标准的更新，
+
+### 总之，sip协议是一种类似于http协议的对等协议（peer-to-peer）即作为请求又含响应，且是一种异步协议（靠内部事务中各种定时器，如Timer A，B,D,M,G,H,I,L等等处理超时和回调），
+### 由于sip开发心智负担大，目前基于sip的开发栈有：
+- c/c++栈：PJSIP （大厂都在用，如华为、中兴、海能达等一线大厂）
+- java栈：jain-sip-ri.1.3.0-x.jar  (Wvp-GB28181-pro作者用了此依赖)，高级框架：JSR 289: Sip Servlet 1.1（这个开发起来比较愉快！）
+- web栈: sip.js
+- sip应用服务器：Asterisk,FreeSwitch等
+
+### 上面，请大家了解后，我再带你起飞！
 
 
 #### 1.3视频监控平台
