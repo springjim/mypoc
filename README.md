@@ -56,9 +56,6 @@ SIP国标对讲，采用RFC 3261国际标准，以及国内标准系列，如公
 - web栈: sip.js
 - sip应用服务器：Asterisk,FreeSwitch等
 
-### 上面，请大家了解后，我再带你起飞！
-
-
 #### 1.3视频监控平台
 集成了强大的开源流媒体服务[ZLMediaKit](https://github.com/ZLMediaKit/ZLMediaKit)和 SIP服务 [Wvp-GB28181-pro](https://github.com/648540858/wvp-GB28181-pro/tree/master)框架，并在此基础上扩展了公网对讲终端的GB28181协议接入，实现注册、注销、终端音视频实时点播、录像、下载等功能。
 
@@ -98,15 +95,25 @@ SIP国标对讲，采用RFC 3261国际标准，以及国内标准系列，如公
 ### 2、数据库支持人大金仓
 ### 3、Web版调度台 
 
+- 登录地址： https://101.42.238.50:8443/login
+
 - [下载Web调度台教材](https://gitee.com/zhousiraaa/mypoc/blob/master/doc/Web%E8%B0%83%E5%BA%A6%E5%8F%B0%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf)
 
   浏览器支持：360安全浏览器、微软Edge、Google Chrome浏览器，全部原生支持无需插件安装
-  web版主要模块有：群组对讲、定位轨迹、电子围栏、离线地图、视频/语音通话、视频图传与分享、视频会议及录音录像等等
-  ![输入图片说明](image/xinchuang/xc-login.png)
-  ![输入图片说明](image/xinchuang/xc-offlinemap.png)
-  ![输入图片说明](image/xinchuang/xc-stream.png)
-  ![输入图片说明](image/xinchuang/xc-meeting.png)
-  ![输入图片说明](image/xinchuang/xc-record.png)
+  web版主要模块有：大屏监控、群组对讲、定位轨迹、电子围栏、离线地图、视频/语音通话、视频图传与分享、视频会议及录音录像等等
+
+![输入图片说明](image/xinchuang/xc-login.png)
+![输入图片说明](image/xinchuang/xc-bigscreen.png)
+![输入图片说明](image/xinchuang/xc-offlinemap.png)
+![输入图片说明](image/xinchuang/xc-grouptalk.png)
+![输入图片说明](image/xinchuang/xc-ipc-devices.png)
+![输入图片说明](image/xinchuang/xc-ipc-devices-detail.png)
+![输入图片说明](image/xinchuang/xc-ipc-play.png)
+![输入图片说明](image/xinchuang/xc-ipc-ptz.png)
+![输入图片说明](image/xinchuang/xc-ipc-talk.png)
+![输入图片说明](image/xinchuang/xc-stream.png)
+![输入图片说明](image/xinchuang/xc-meeting.png)
+![输入图片说明](image/xinchuang/xc-record.png)
 
 ## 三、平台介绍教材
 - [下载最新版部署说明](https://gitee.com/zhousiraaa/mypoc/blob/master/doc/MyPOC%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2%E6%89%8B%E5%86%8C-2025.10%E7%89%88.pdf)
